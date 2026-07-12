@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>schATZ - German Learning Fantasy RPG</title>
+    <title>schATZ - Türkçe Konuşanlar İçin Almanca Öğrenme Fantastik RPG</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts -->
@@ -160,21 +160,21 @@
     <!-- FX CANVAS: Ambient weather (leaves, rain, snow, embers, fireflies) -->
     <canvas id="fx-canvas" class="absolute top-0 left-0 w-full h-full pointer-events-none z-0"></canvas>
 
-    <!-- CRT Scanline Effect (Togglable) -->
+    <!-- CRT Scanline Effect -->
     <div id="crt-overlay" class="scanlines absolute top-0 left-0 w-full h-full pointer-events-none"></div>
 
-    <!-- MAIN CONSOLE MOCK (Elegant medieval Elven Slate frame for absolute mobile-first gameplay immersion) -->
+    <!-- MAIN CONSOLE MOCK -->
     <div class="relative w-full max-w-[480px] min-h-[820px] h-[92vh] flex flex-col justify-between wood-panel rounded-3xl p-3 sm:p-5 shadow-2xl overflow-hidden z-10 border-[6px] border-[#2b1f11]">
         
-        <!-- TOP STATUS HEADER bar (Always visible to track stats/experience) -->
+        <!-- TOP STATUS HEADER bar -->
         <div class="stone-panel rounded-xl p-3 flex justify-between items-center z-10 border-2 border-neutral-900 mb-2">
             <!-- Level & EXP Indicator -->
             <div class="flex flex-col flex-1 mr-2">
                 <div class="flex justify-between items-center mb-1">
                     <span class="pixel-heading text-amber-400 flex items-center gap-1">
-                        <i class="fa-solid fa-crown"></i> LV <span id="player-level">1</span>
+                        <i class="fa-solid fa-crown"></i> SV <span id="player-level">1</span>
                     </span>
-                    <span class="text-xs text-neutral-300 tracking-wider"><span id="player-xp">0</span>/<span id="player-xp-needed">100</span> XP</span>
+                    <span class="text-xs text-neutral-300 tracking-wider"><span id="player-xp">0</span>/<span id="player-xp-needed">100</span> TP</span>
                 </div>
                 <!-- XP Bar -->
                 <div class="w-full bg-[#1c1009] h-3 border border-amber-950 rounded p-0.5">
@@ -190,12 +190,12 @@
                 </div>
                 <div class="flex items-center gap-1.5 text-orange-400 font-bold">
                     <i class="fa-solid fa-fire text-sm text-orange-500 heart-pulse"></i>
-                    <span id="player-streak">3</span> Täg.
+                    <span id="player-streak">3</span> Gün
                 </div>
             </div>
         </div>
 
-        <!-- CENTRAL CONTENT VIEWPORT (Houses all dynamically toggled scenes) -->
+        <!-- CENTRAL CONTENT VIEWPORT -->
         <div class="flex-1 w-full bg-[#171210] border-4 border-[#1a120c] rounded-xl relative overflow-hidden flex flex-col">
             
             <!-- SCENE 1: START/WELCOME INTRO -->
@@ -207,14 +207,13 @@
                             schATZ
                         </div>
                         <div class="text-xs tracking-widest text-emerald-400 font-semibold bg-[#211612] px-3 py-1 rounded border border-emerald-950 inline-block mt-2">
-                            A COZY GERMAN FANTASY RPG
+                            ALMANCA ÖĞRENME RPG MACERASI
                         </div>
                     </div>
 
                     <!-- Ambient Floating Castle Mascot Graphic -->
                     <div class="w-48 h-48 flex justify-center items-center mb-6 relative">
                         <svg viewBox="0 0 100 100" class="w-full h-full float-hover">
-                            <!-- Draw a cozy magical stone castle -->
                             <rect x="25" y="45" width="50" height="40" fill="#4a4d54" stroke="#1a120c" stroke-width="4"/>
                             <rect x="15" y="25" width="20" height="60" fill="#6c707a" stroke="#1a120c" stroke-width="4"/>
                             <rect x="65" y="25" width="20" height="60" fill="#6c707a" stroke="#1a120c" stroke-width="4"/>
@@ -222,30 +221,29 @@
                             <polygon points="65,25 75,5 85,25" fill="#a62a2a" stroke="#1a120c" stroke-width="4"/>
                             <polygon points="35,45 50,25 65,45" fill="#df9c26" stroke="#1a120c" stroke-width="4"/>
                             <rect x="40" y="65" width="20" height="20" fill="#3d2516" stroke="#1a120c" stroke-width="4"/>
-                            <!-- Glowing crystal heart above castle -->
                             <polygon points="50,15 55,5 50,0 45,5" fill="#4cc9f0" class="heart-pulse"/>
                         </svg>
                     </div>
 
                     <p class="text-stone-300 text-lg leading-snug px-3 mb-6 max-w-sm">
-                        "Your words are your spells, adventurer. Step through the gate, learn German, and retrieve the mystical crown of schATZ."
+                        "Kelimelerin senin büyülerin, maceracı. Kapıdan geç, Almanca öğren ve schATZ'ın gizemli tacını geri al."
                     </p>
                 </div>
 
                 <div class="w-full space-y-3">
                     <button id="btn-start-adventure" class="w-full pixel-btn-gold py-3 text-lg font-bold uppercase tracking-wider pixel-heading">
-                        Start Adventure
+                        Maceraya Başla
                     </button>
                     <div class="text-[11px] text-neutral-500 flex justify-between px-2">
-                        <span>Built with Gemini Flash 3.1</span>
-                        <span>Cozy retro v2.0</span>
+                        <span>Gemini Flash 3.1 ile Güçlendirildi</span>
+                        <span>Cozy Retro v2.1</span>
                     </div>
                 </div>
             </div>
 
             <!-- SCENE 2: THE VILLAGE HUB -->
             <div id="scene-village" class="absolute inset-0 flex flex-col justify-between hidden bg-[#2d5c34] transition-colors duration-1000 relative">
-                <!-- Parallax background container (Forest morning / Magic sunset / Purple Night) -->
+                <!-- Parallax background container -->
                 <div id="village-sky" class="absolute inset-0 bg-gradient-to-b from-sky-400 to-[#2d5c34] opacity-80 z-0"></div>
 
                 <!-- Scrolling Clouds & Trees visual placeholder -->
@@ -253,14 +251,14 @@
                     <marquee scrollamount="1" class="text-white text-3xl font-extrabold opacity-50">☁️ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ☁️</marquee>
                 </div>
 
-                <!-- Main Hub Navigation Cards (Houses represented inside a scrollable village square) -->
+                <!-- Main Hub Navigation Cards -->
                 <div class="z-10 p-4 overflow-y-auto max-h-[85%] space-y-4 pt-14">
                     <!-- Day/Night Indicator & Header -->
                     <div class="stone-panel p-2 flex justify-between items-center text-xs text-neutral-300 rounded mb-4">
-                        <span class="font-bold text-amber-300"><i class="fa-solid fa-campground"></i> SCHATZ HUB VILLAGE</span>
+                        <span class="font-bold text-amber-300"><i class="fa-solid fa-campground"></i> SCHATZ MERKEZ KÖYÜ</span>
                         <div class="flex items-center gap-2">
-                            <span id="time-indicator">☀️ Tag (Day)</span>
-                            <button id="btn-toggle-time" class="bg-neutral-800 hover:bg-neutral-700 p-1 px-2 rounded text-[10px] border border-neutral-600 text-amber-200">Cycle Time</button>
+                            <span id="time-indicator">☀️ Gündüz (Tag)</span>
+                            <button id="btn-toggle-time" class="bg-neutral-800 hover:bg-neutral-700 p-1 px-2 rounded text-[10px] border border-neutral-600 text-amber-200">Zamanı Değiştir</button>
                         </div>
                     </div>
 
@@ -268,8 +266,8 @@
                     <div onclick="switchScene('scene-inn')" class="wood-panel p-3.5 flex items-center gap-4 cursor-pointer hover:translate-x-1 hover:border-amber-400 transition-all rounded-lg">
                         <div class="text-3xl shrink-0 p-2.5 bg-[#4e2d17] border border-amber-900 rounded-lg text-amber-400 float-hover">🍻</div>
                         <div>
-                            <div class="pixel-heading text-[#df9c26]">The Cozy Inn</div>
-                            <p class="text-sm text-stone-300">Speak German with friendly NPCs (Live Gemini AI Chat!)</p>
+                            <div class="pixel-heading text-[#df9c26]">Cozy Han (Sohbet)</div>
+                            <p class="text-sm text-stone-300">Han sakinleriyle Almanca sohbet et! (Canlı Gemini Yapay Zekası)</p>
                         </div>
                     </div>
 
@@ -277,8 +275,8 @@
                     <div onclick="initGrammarSlimeBattle()" class="stone-panel p-3.5 flex items-center gap-4 cursor-pointer hover:translate-x-1 hover:border-cyan-400 transition-all rounded-lg">
                         <div class="text-3xl shrink-0 p-2.5 bg-neutral-700 border border-neutral-800 rounded-lg text-cyan-400 float-hover">⚔️</div>
                         <div>
-                            <div class="pixel-heading text-cyan-300">Academy of Spells</div>
-                            <p class="text-sm text-stone-300">Fight Grammar Slimes! Master German grammar rules & verbs.</p>
+                            <div class="pixel-heading text-cyan-300">Büyü Akademisi (Savaş)</div>
+                            <p class="text-sm text-stone-300">Dil Bilgisi Balçıklarıyla savaş! Almanca kuralları ve fiilleri öğren.</p>
                         </div>
                     </div>
 
@@ -286,8 +284,8 @@
                     <div onclick="initLibraryFlashcards()" class="wood-panel p-3.5 flex items-center gap-4 cursor-pointer hover:translate-x-1 hover:border-amber-400 transition-all rounded-lg">
                         <div class="text-3xl shrink-0 p-2.5 bg-[#4e2d17] border border-amber-900 rounded-lg text-amber-500 float-hover">📜</div>
                         <div>
-                            <div class="pixel-heading text-amber-300">The Royal Library</div>
-                            <p class="text-sm text-stone-300">Cozy German-to-English scroll magic flashcards.</p>
+                            <div class="pixel-heading text-amber-300">Kraliyet Kütüphanesi</div>
+                            <p class="text-sm text-stone-300">Almanca-Türkçe büyülü kelime parşömenlerini çalış.</p>
                         </div>
                     </div>
 
@@ -295,8 +293,8 @@
                     <div onclick="initQuestBoard()" class="parchment-panel p-3.5 flex items-center gap-4 cursor-pointer hover:translate-x-1 hover:border-amber-700 transition-all rounded-lg">
                         <div class="text-3xl shrink-0 p-2.5 bg-[#bf9d6f] border border-amber-800 rounded-lg text-amber-900 float-hover">📌</div>
                         <div>
-                            <div class="pixel-heading text-amber-900">Quest Board</div>
-                            <p class="text-sm text-amber-950">Daily adventurer translation quests! Earn easy Gold.</p>
+                            <div class="pixel-heading text-amber-900">Görev Tahtası</div>
+                            <p class="text-sm text-amber-950">Günlük tercüme görevlerini tamamla ve kolayca Altın kazan.</p>
                         </div>
                     </div>
 
@@ -304,8 +302,8 @@
                     <div onclick="switchScene('scene-avatar')" class="wood-panel p-3.5 flex items-center gap-4 cursor-pointer hover:translate-x-1 hover:border-pink-400 transition-all rounded-lg">
                         <div class="text-3xl shrink-0 p-2.5 bg-[#4e2d17] border border-amber-900 rounded-lg text-pink-400 float-hover">🛌</div>
                         <div>
-                            <div class="pixel-heading text-pink-300">Player Sanctuary</div>
-                            <p class="text-sm text-stone-300">Customize your pixel sprite & change gear.</p>
+                            <div class="pixel-heading text-pink-300">Sığınak (Profil)</div>
+                            <p class="text-sm text-stone-300">Kendi piksel kahramanını ve ekipmanını özelleştir.</p>
                         </div>
                     </div>
 
@@ -313,8 +311,8 @@
                     <div onclick="initMarketShop()" class="stone-panel p-3.5 flex items-center gap-4 cursor-pointer hover:translate-x-1 hover:border-emerald-400 transition-all rounded-lg">
                         <div class="text-3xl shrink-0 p-2.5 bg-neutral-700 border border-neutral-800 rounded-lg text-emerald-400 float-hover">💰</div>
                         <div>
-                            <div class="pixel-heading text-emerald-300">Fantasy Market</div>
-                            <p class="text-sm text-stone-300">Unlock shields, mystical companions, and auras.</p>
+                            <div class="pixel-heading text-emerald-300">Fantastik Pazar</div>
+                            <p class="text-sm text-stone-300">Kalkanlar, mistik yoldaşlar ve harika auralar satın al.</p>
                         </div>
                     </div>
                 </div>
@@ -322,7 +320,7 @@
                 <!-- Navigation Hub Bottom bar: World Map Access -->
                 <div class="z-10 p-3 bg-[#1e140f] border-t border-amber-950 flex gap-2">
                     <button onclick="switchScene('scene-map')" class="w-full pixel-btn-gold py-2.5 flex items-center justify-center gap-2 pixel-heading">
-                        <i class="fa-solid fa-map-location-dot text-sm"></i> Go to World Map
+                        <i class="fa-solid fa-map-location-dot text-sm"></i> Dünya Haritasına Git
                     </button>
                 </div>
             </div>
@@ -330,70 +328,70 @@
             <!-- SCENE 3: PLAYER AVATAR CREATOR & CUSTOMIZER -->
             <div id="scene-avatar" class="absolute inset-0 hidden flex-col justify-between p-4 bg-[#1a120c] z-20">
                 <div class="flex justify-between items-center mb-2 border-b border-amber-900 pb-2 shrink-0">
-                    <span class="pixel-heading text-pink-300"><i class="fa-solid fa-user-gear"></i> SANCTUARY</span>
-                    <button onclick="switchScene('scene-village')" class="pixel-btn-red py-1 px-3 text-xs">Back</button>
+                    <span class="pixel-heading text-pink-300"><i class="fa-solid fa-user-gear"></i> SIĞINAK</span>
+                    <button onclick="switchScene('scene-village')" class="pixel-btn-red py-1 px-3 text-xs">Geri Git</button>
                 </div>
 
                 <div class="flex-1 overflow-y-auto space-y-4 pr-1">
                     <!-- Live Avatar Render View -->
                     <div class="stone-panel rounded-lg p-4 flex flex-col items-center relative min-h-[170px] justify-center bg-gradient-to-b from-[#1b2a47] to-[#0a1120]">
-                        <div class="absolute top-2 left-2 text-[10px] text-neutral-400 uppercase tracking-widest bg-neutral-900/80 px-2 py-0.5 rounded">Character View</div>
+                        <div class="absolute top-2 left-2 text-[10px] text-neutral-400 uppercase tracking-widest bg-neutral-900/80 px-2 py-0.5 rounded">Karakter Görünümü</div>
                         <div id="avatar-render-svg" class="w-28 h-28 flex justify-center items-center relative float-hover">
-                            <!-- Dynamically Drawn Layered Avatar SVG -->
+                            <!-- SVG layered dynamic graphics -->
                         </div>
-                        <div class="mt-2 text-xs text-neutral-300 tracking-wider font-bold" id="avatar-status-label">Rookie German Spellcaster</div>
+                        <div class="mt-2 text-xs text-neutral-300 tracking-wider font-bold" id="avatar-status-label">Acemi Almanca Büyücüsü</div>
                     </div>
 
                     <!-- Customizer Selections -->
                     <div class="wood-panel rounded-lg p-3 space-y-3">
-                        <div class="text-xs uppercase text-amber-400 font-bold tracking-widest border-b border-amber-950 pb-1">Appearance Options</div>
+                        <div class="text-xs uppercase text-amber-400 font-bold tracking-widest border-b border-amber-950 pb-1">Görünüm Seçenekleri</div>
                         
                         <!-- Hair Style Selector -->
                         <div class="flex justify-between items-center bg-[#25150d] p-2 rounded">
-                            <span class="text-sm">💇 Hair Style:</span>
+                            <span class="text-sm">💇 Saç Stili:</span>
                             <div class="flex gap-2">
                                 <button onclick="changeAvatarFeature('hairStyle', -1)" class="bg-[#4e2d17] hover:bg-amber-900 text-amber-200 px-2 rounded border border-amber-950 text-xs py-0.5">&lt;</button>
-                                <span class="text-xs font-bold text-stone-200 min-w-[60px] text-center" id="lbl-hairStyle">Short</span>
+                                <span class="text-xs font-bold text-stone-200 min-w-[60px] text-center" id="lbl-hairStyle">Kısa Dikenli</span>
                                 <button onclick="changeAvatarFeature('hairStyle', 1)" class="bg-[#4e2d17] hover:bg-amber-900 text-amber-200 px-2 rounded border border-amber-950 text-xs py-0.5">&gt;</button>
                             </div>
                         </div>
 
                         <!-- Hair Color Selector -->
                         <div class="flex justify-between items-center bg-[#25150d] p-2 rounded">
-                            <span class="text-sm">🎨 Hair Color:</span>
+                            <span class="text-sm">🎨 Saç Rengi:</span>
                             <div class="flex gap-2">
                                 <button onclick="changeAvatarFeature('hairColor', -1)" class="bg-[#4e2d17] hover:bg-amber-900 text-amber-200 px-2 rounded border border-amber-950 text-xs py-0.5">&lt;</button>
-                                <span class="text-xs font-bold text-stone-200 min-w-[60px] text-center" id="lbl-hairColor">Gold</span>
+                                <span class="text-xs font-bold text-stone-200 min-w-[60px] text-center" id="lbl-hairColor">Gümüş</span>
                                 <button onclick="changeAvatarFeature('hairColor', 1)" class="bg-[#4e2d17] hover:bg-amber-900 text-amber-200 px-2 rounded border border-amber-950 text-xs py-0.5">&gt;</button>
                             </div>
                         </div>
 
                         <!-- Outfit Selector -->
                         <div class="flex justify-between items-center bg-[#25150d] p-2 rounded">
-                            <span class="text-sm">🥋 Outfit Type:</span>
+                            <span class="text-sm">🥋 Zırh/Kıyafet:</span>
                             <div class="flex gap-2">
                                 <button onclick="changeAvatarFeature('outfit', -1)" class="bg-[#4e2d17] hover:bg-amber-900 text-amber-200 px-2 rounded border border-amber-950 text-xs py-0.5">&lt;</button>
-                                <span class="text-xs font-bold text-stone-200 min-w-[60px] text-center" id="lbl-outfit">Tunic</span>
+                                <span class="text-xs font-bold text-stone-200 min-w-[60px] text-center" id="lbl-outfit">Tunis</span>
                                 <button onclick="changeAvatarFeature('outfit', 1)" class="bg-[#4e2d17] hover:bg-amber-900 text-amber-200 px-2 rounded border border-amber-950 text-xs py-0.5">&gt;</button>
                             </div>
                         </div>
 
                         <!-- Pet Companion Selector -->
                         <div class="flex justify-between items-center bg-[#25150d] p-2 rounded">
-                            <span class="text-sm">🐉 Pet / Companion:</span>
+                            <span class="text-sm">🐉 Pet / Yoldaş:</span>
                             <div class="flex gap-2">
                                 <button onclick="changeAvatarFeature('pet', -1)" class="bg-[#4e2d17] hover:bg-amber-900 text-amber-200 px-2 rounded border border-amber-950 text-xs py-0.5">&lt;</button>
-                                <span class="text-xs font-bold text-stone-200 min-w-[60px] text-center" id="lbl-pet">None</span>
+                                <span class="text-xs font-bold text-stone-200 min-w-[60px] text-center" id="lbl-pet">Yok</span>
                                 <button onclick="changeAvatarFeature('pet', 1)" class="bg-[#4e2d17] hover:bg-amber-900 text-amber-200 px-2 rounded border border-amber-950 text-xs py-0.5">&gt;</button>
                             </div>
                         </div>
 
                         <!-- Back Items Selector -->
                         <div class="flex justify-between items-center bg-[#25150d] p-2 rounded">
-                            <span class="text-sm">🎒 Back Item:</span>
+                            <span class="text-sm">🎒 Sırt Eşyası:</span>
                             <div class="flex gap-2">
                                 <button onclick="changeAvatarFeature('backItem', -1)" class="bg-[#4e2d17] hover:bg-amber-900 text-amber-200 px-2 rounded border border-amber-950 text-xs py-0.5">&lt;</button>
-                                <span class="text-xs font-bold text-stone-200 min-w-[60px] text-center" id="lbl-backItem">None</span>
+                                <span class="text-xs font-bold text-stone-200 min-w-[60px] text-center" id="lbl-backItem">Yok</span>
                                 <button onclick="changeAvatarFeature('backItem', 1)" class="bg-[#4e2d17] hover:bg-amber-900 text-amber-200 px-2 rounded border border-amber-950 text-xs py-0.5">&gt;</button>
                             </div>
                         </div>
@@ -402,7 +400,7 @@
 
                 <div class="mt-2 shrink-0">
                     <button onclick="saveAvatarAndNotify()" class="w-full pixel-btn-green py-2.5 text-xs pixel-heading">
-                        Save Avatar Config
+                        Karakteri Kaydet
                     </button>
                 </div>
             </div>
@@ -410,14 +408,14 @@
             <!-- SCENE 4: WORLD MAP WITH UNLOCKABLE BIOMES -->
             <div id="scene-map" class="absolute inset-0 hidden flex-col justify-between p-4 bg-[#111e15] z-20">
                 <div class="flex justify-between items-center mb-2 border-b border-emerald-900 pb-2 shrink-0">
-                    <span class="pixel-heading text-emerald-400"><i class="fa-solid fa-map-location-dot"></i> SCHATZ WORLD</span>
-                    <button onclick="switchScene('scene-village')" class="pixel-btn-red py-1 px-3 text-xs">Back</button>
+                    <span class="pixel-heading text-emerald-400"><i class="fa-solid fa-map-location-dot"></i> SCHATZ DÜNYASI</span>
+                    <button onclick="switchScene('scene-village')" class="pixel-btn-red py-1 px-3 text-xs">Geri Git</button>
                 </div>
 
                 <!-- Simulated Scrollable World Map Area -->
                 <div class="flex-1 overflow-y-auto pr-1 space-y-4">
                     <div class="text-center text-xs text-stone-400 px-2">
-                        Earn Experience (XP) in the Village to unlock high level biomes. Level up to clear the magical forest fog!
+                        Yeni bölgeler keşfetmek için seviyeni yükselt. Seviye atladıkça haritadaki sisler dağılacaktır!
                     </div>
 
                     <!-- Map Nodes list -->
@@ -425,37 +423,37 @@
                         <!-- Node 1: Forest -->
                         <div class="stone-panel p-3 border-2 border-green-700 bg-gradient-to-r from-[#1b3d22] to-[#2d5c34] rounded flex justify-between items-center relative overflow-hidden">
                             <div>
-                                <div class="pixel-heading text-green-300 text-xs">🌲 Whispering Forest (Level 1)</div>
-                                <span class="text-[11px] text-stone-300 bg-green-950/80 p-1 px-2 rounded inline-block mt-1">Unlocked & Active</span>
+                                <div class="pixel-heading text-green-300 text-xs">🌲 Fısıldayan Orman (Seviye 1)</div>
+                                <span class="text-[11px] text-stone-300 bg-green-950/80 p-1 px-2 rounded inline-block mt-1">Keşfe Açık</span>
                             </div>
-                            <button onclick="setWorldMapWeather('forest')" class="pixel-btn-green text-xs p-2">Explore</button>
+                            <button onclick="setWorldMapWeather('forest')" class="pixel-btn-green text-xs p-2">Keşfet</button>
                         </div>
 
                         <!-- Node 2: Desert -->
                         <div id="biome-desert-container" class="stone-panel p-3 border-2 border-amber-800 bg-gradient-to-r from-[#3d2f1b] to-[#5c4a2d] rounded flex justify-between items-center relative overflow-hidden opacity-60">
                             <div>
-                                <div class="pixel-heading text-amber-400 text-xs">🏜️ Desert of Whispers (Level 5)</div>
-                                <span id="biome-desert-lock" class="text-[11px] text-orange-400 bg-amber-950/80 p-1 px-2 rounded inline-block mt-1"><i class="fa-solid fa-lock"></i> Requires Level 5</span>
+                                <div class="pixel-heading text-amber-400 text-xs">🏜️ Fısıltı Çölü (Seviye 5)</div>
+                                <span id="biome-desert-lock" class="text-[11px] text-orange-400 bg-amber-950/80 p-1 px-2 rounded inline-block mt-1"><i class="fa-solid fa-lock"></i> Seviye 5 Gerekli</span>
                             </div>
-                            <button id="btn-explore-desert" class="pixel-btn-gold text-xs p-2 opacity-50 cursor-not-allowed" disabled>Explore</button>
+                            <button id="btn-explore-desert" class="pixel-btn-gold text-xs p-2 opacity-50 cursor-not-allowed" disabled>Keşfet</button>
                         </div>
 
                         <!-- Node 3: Snow -->
                         <div id="biome-snow-container" class="stone-panel p-3 border-2 border-blue-900 bg-gradient-to-r from-[#1b333d] to-[#2d4d5c] rounded flex justify-between items-center relative overflow-hidden opacity-60">
                             <div>
-                                <div class="pixel-heading text-cyan-300 text-xs">❄️ Frozen Kingdom (Level 10)</div>
-                                <span id="biome-snow-lock" class="text-[11px] text-cyan-400 bg-blue-950/80 p-1 px-2 rounded inline-block mt-1"><i class="fa-solid fa-lock"></i> Requires Level 10</span>
+                                <div class="pixel-heading text-cyan-300 text-xs">❄️ Donmuş Krallık (Seviye 10)</div>
+                                <span id="biome-snow-lock" class="text-[11px] text-cyan-400 bg-blue-950/80 p-1 px-2 rounded inline-block mt-1"><i class="fa-solid fa-lock"></i> Seviye 10 Gerekli</span>
                             </div>
-                            <button id="btn-explore-snow" class="pixel-btn-magic text-xs p-2 opacity-50 cursor-not-allowed" disabled>Explore</button>
+                            <button id="btn-explore-snow" class="pixel-btn-magic text-xs p-2 opacity-50 cursor-not-allowed" disabled>Keşfet</button>
                         </div>
 
                         <!-- Node 4: Mushroom Forest -->
                         <div id="biome-mushroom-container" class="stone-panel p-3 border-2 border-purple-900 bg-gradient-to-r from-[#2e1b3d] to-[#4c2d5c] rounded flex justify-between items-center relative overflow-hidden opacity-60">
                             <div>
-                                <div class="pixel-heading text-fuchsia-400 text-xs">🍄 Magic Fungi Vale (Level 15)</div>
-                                <span id="biome-mushroom-lock" class="text-[11px] text-fuchsia-400 bg-purple-950/80 p-1 px-2 rounded inline-block mt-1"><i class="fa-solid fa-lock"></i> Requires Level 15</span>
+                                <div class="pixel-heading text-fuchsia-400 text-xs">🍄 Büyülü Mantar Vadisi (Seviye 15)</div>
+                                <span id="biome-mushroom-lock" class="text-[11px] text-fuchsia-400 bg-purple-950/80 p-1 px-2 rounded inline-block mt-1"><i class="fa-solid fa-lock"></i> Seviye 15 Gerekli</span>
                             </div>
-                            <button id="btn-explore-mushroom" class="pixel-btn-magic text-xs p-2 opacity-50 cursor-not-allowed" disabled>Explore</button>
+                            <button id="btn-explore-mushroom" class="pixel-btn-magic text-xs p-2 opacity-50 cursor-not-allowed" disabled>Keşfet</button>
                         </div>
                     </div>
                 </div>
@@ -464,27 +462,25 @@
             <!-- SCENE 5: COZY FANTASY MARKET SHOP -->
             <div id="scene-market" class="absolute inset-0 hidden flex-col justify-between p-4 bg-[#141b17] z-20">
                 <div class="flex justify-between items-center mb-2 border-b border-emerald-900 pb-2 shrink-0">
-                    <span class="pixel-heading text-emerald-400"><i class="fa-solid fa-coins"></i> MARKET SQUARE</span>
-                    <button onclick="switchScene('scene-village')" class="pixel-btn-red py-1 px-3 text-xs">Back</button>
+                    <span class="pixel-heading text-emerald-400"><i class="fa-solid fa-coins"></i> PAZAR MEYDANI</span>
+                    <button onclick="switchScene('scene-village')" class="pixel-btn-red py-1 px-3 text-xs">Geri Git</button>
                 </div>
 
                 <div class="flex-1 overflow-y-auto space-y-3 pr-1">
                     <div class="bg-emerald-950/50 p-2 text-xs border border-emerald-900 text-stone-200 text-center rounded">
-                        Spend your Gold Coins earned from spelling battles & daily quests on legendary cosmetics!
+                        Akademiden kazandığın altınları kullanarak karakterine yepyeni efsanevi kozmetikler al!
                     </div>
 
                     <!-- Shop Items list -->
-                    <div class="space-y-3" id="shop-items-container">
-                        <!-- Shop items are populated dynamically by JS -->
-                    </div>
+                    <div class="space-y-3" id="shop-items-container"></div>
                 </div>
             </div>
 
             <!-- SCENE 6: THE INN (AI NPC DIALOGUE SYSTEM) -->
             <div id="scene-inn" class="absolute inset-0 hidden flex-col justify-between p-4 bg-[#23150d] z-20">
                 <div class="flex justify-between items-center mb-2 border-b border-amber-900 pb-2 shrink-0">
-                    <span class="pixel-heading text-amber-300"><i class="fa-solid fa-beer-mug-empty text-sm"></i> COZY INN CHAT</span>
-                    <button onclick="switchScene('scene-village')" class="pixel-btn-red py-1 px-3 text-xs">Leave</button>
+                    <span class="pixel-heading text-amber-300"><i class="fa-solid fa-beer-mug-empty text-sm"></i> COZY HAN SOHBETİ</span>
+                    <button onclick="switchScene('scene-village')" class="pixel-btn-red py-1 px-3 text-xs">Ayrıl</button>
                 </div>
 
                 <!-- Dialogue box with multiple NPCs selector -->
@@ -498,21 +494,21 @@
                 <div class="shrink-0 wood-panel p-2 flex items-center gap-3 mb-2 rounded border border-amber-900 bg-[#351e12]">
                     <span id="npc-avatar-box" class="text-3xl">🍺</span>
                     <div>
-                        <div id="npc-name-box" class="pixel-heading text-xs text-amber-300">Gunter the Innkeeper</div>
-                        <p id="npc-desc-box" class="text-xs text-stone-300">"Warm hearth, cold ale, and patient conversational German."</p>
+                        <div id="npc-name-box" class="pixel-heading text-xs text-amber-300">Hancı Gunter</div>
+                        <p id="npc-desc-box" class="text-xs text-stone-300">"Sıcak bir ocak, soğuk içecekler ve yeni başlayanlar için basit Almanca."</p>
                     </div>
                 </div>
 
                 <!-- Chat History Scroll Panel -->
                 <div id="inn-chat-scroll" class="flex-1 bg-[#150c07] border-2 border-amber-950 p-3 overflow-y-auto space-y-3 rounded mb-2 flex flex-col">
                     <div class="bg-[#2a170d] border border-amber-950 p-2 text-xs rounded text-amber-200">
-                        Introduce yourself to the NPC! Send your message in German or English. Use Gemini API below for custom AI answers!
+                        Han sakinleriyle sohbet et! Mesajını Türkçe veya Almanca gönderebilirsin. Aşağıda Gemini anahtarını ekleyerek canlı yapay zeka ile sınırsız konuşabilirsin!
                     </div>
-                    <!-- Conversation bubble templates -->
+                    <!-- Chat starts here -->
                     <div class="flex flex-col gap-1 items-start max-w-[85%]">
                         <span class="text-[10px] text-amber-400 font-bold px-1" id="chat-badge">Gunter</span>
                         <div class="parchment-panel p-2 text-xs rounded-lg rounded-tl-none">
-                            Hallo! Ich bin Gunter. (Hello! I am Gunter.) What would you like to order today?
+                            Hallo! Ich bin Gunter. (Merhaba! Ben Gunter.) Was möchtest du heute trinken? (Bugün ne içmek istersin?)
                         </div>
                     </div>
                 </div>
@@ -520,20 +516,20 @@
                 <!-- AI Quick Replies or Custom User prompt -->
                 <div class="shrink-0 space-y-2">
                     <div class="flex gap-1 overflow-x-auto py-1">
-                        <button onclick="sendNpcQuickReply('Hallo, ich bin ein Abenteurer!')" class="bg-[#412717] hover:bg-[#593620] border border-amber-950 text-amber-100 text-xs px-2.5 py-1 rounded shrink-0">"Hallo! (Hello!)"</button>
-                        <button onclick="sendNpcQuickReply('Ein Bier bitte!')" class="bg-[#412717] hover:bg-[#593620] border border-amber-950 text-amber-100 text-xs px-2.5 py-1 rounded shrink-0">"Ein Bier bitte! (Beer please!)"</button>
-                        <button onclick="sendNpcQuickReply('Wie geht es dir?')" class="bg-[#412717] hover:bg-[#593620] border border-amber-950 text-amber-100 text-xs px-2.5 py-1 rounded shrink-0">"Wie geht es dir? (How are you?)"</button>
+                        <button onclick="sendNpcQuickReply('Hallo, ich bin ein Abenteurer!')" class="bg-[#412717] hover:bg-[#593620] border border-amber-950 text-amber-100 text-xs px-2.5 py-1 rounded shrink-0">"Hallo! (Merhaba!)"</button>
+                        <button onclick="sendNpcQuickReply('Ein Bier bitte!')" class="bg-[#412717] hover:bg-[#593620] border border-amber-950 text-amber-100 text-xs px-2.5 py-1 rounded shrink-0">"Ein Bier bitte! (Bir bira lütfen!)"</button>
+                        <button onclick="sendNpcQuickReply('Wie geht es dir?')" class="bg-[#412717] hover:bg-[#593620] border border-amber-950 text-amber-100 text-xs px-2.5 py-1 rounded shrink-0">"Wie geht es dir? (Nasılsın?)"</button>
                     </div>
 
                     <div class="flex gap-2">
-                        <input type="text" id="inn-chat-input" placeholder="Type your spell/reply..." class="flex-1 bg-[#1a0f0a] border-2 border-amber-950 text-sm p-2 rounded focus:outline-none focus:border-amber-500 text-amber-200">
-                        <button onclick="sendInnMessage()" class="pixel-btn-gold px-4 py-2 text-xs">Cast</button>
+                        <input type="text" id="inn-chat-input" placeholder="Kelime büyünü buraya yaz..." class="flex-1 bg-[#1a0f0a] border-2 border-amber-950 text-sm p-2 rounded focus:outline-none focus:border-amber-500 text-amber-200">
+                        <button onclick="sendInnMessage()" class="pixel-btn-gold px-4 py-2 text-xs">Yolla</button>
                     </div>
 
                     <!-- Gemini API Settings Link -->
                     <div class="flex justify-between items-center text-[10px] text-stone-500 px-1 pt-1">
-                        <span>Powered by Gemini Live API Simulator</span>
-                        <button onclick="toggleGeminiSettings()" class="text-amber-500 hover:underline">API Config</button>
+                        <span>Gemini Canlı Yapay Zekası Simülasyonu</span>
+                        <button onclick="toggleGeminiSettings()" class="text-amber-500 hover:underline">Yapay Zeka Ayarları</button>
                     </div>
                 </div>
             </div>
@@ -541,38 +537,37 @@
             <!-- SCENE 7: THE ROYAL LIBRARY (FLASHCARDS) -->
             <div id="scene-library" class="absolute inset-0 hidden flex-col justify-between p-4 bg-[#211611] z-20">
                 <div class="flex justify-between items-center mb-2 border-b border-amber-900 pb-2 shrink-0">
-                    <span class="pixel-heading text-amber-400"><i class="fa-solid fa-book-open"></i> ROYAL LIBRARY</span>
-                    <button onclick="switchScene('scene-village')" class="pixel-btn-red py-1 px-3 text-xs">Back</button>
+                    <span class="pixel-heading text-amber-400"><i class="fa-solid fa-book-open"></i> KRALİYET KÜTÜPHANESİ</span>
+                    <button onclick="switchScene('scene-village')" class="pixel-btn-red py-1 px-3 text-xs">Geri Git</button>
                 </div>
 
                 <!-- Flashcard Widget Area -->
                 <div class="flex-1 flex flex-col justify-center items-center p-2">
-                    <!-- Progress meter -->
                     <div class="text-xs text-stone-400 mb-3 uppercase tracking-widest font-semibold">
-                        Card <span id="flashcard-current-index">1</span> of 10 (Vocabulary Spell)
+                        KART <span id="flashcard-current-index">1</span> / 10 (Kelime Büyüsü)
                     </div>
 
-                    <!-- Fliphable Retro Parchment Scroll -->
+                    <!-- Flippable Retro Parchment Scroll -->
                     <div onclick="flipFlashcard()" id="flashcard-container" class="w-full max-w-sm h-64 cursor-pointer relative preserve-3d transition-transform duration-500 flex flex-col justify-center items-center p-4 text-center rounded-xl parchment-panel select-none hover:shadow-xl">
                         <!-- Front Face (German Word) -->
                         <div id="flashcard-front" class="space-y-4">
-                            <div class="text-amber-800 text-sm uppercase tracking-widest font-black">🇩🇪 German Spell</div>
+                            <div class="text-amber-800 text-sm uppercase tracking-widest font-black">🇩🇪 Almanca Kelime</div>
                             <div class="text-4xl font-extrabold text-amber-950 tracking-wider" id="flashcard-word-german">Das Abenteuer</div>
-                            <div class="text-xs text-amber-800 italic mt-2">Click to flip/translate</div>
+                            <div class="text-xs text-amber-800 italic mt-2">Kartı çevirmek için tıkla</div>
                         </div>
 
-                        <!-- Back Face (English Translation & audio trigger) -->
+                        <!-- Back Face (Turkish Translation) -->
                         <div id="flashcard-back" class="hidden space-y-4">
-                            <div class="text-emerald-800 text-sm uppercase tracking-widest font-black">🇬🇧 Magic Counter-Spell</div>
-                            <div class="text-3xl font-extrabold text-emerald-950" id="flashcard-word-english">The Adventure</div>
-                            <div class="text-xs text-emerald-800 italic mt-2">Perfect pronunciation unlocked!</div>
+                            <div class="text-emerald-800 text-sm uppercase tracking-widest font-black">🇹🇷 Türkçe Çevirisi</div>
+                            <div class="text-3xl font-extrabold text-emerald-950" id="flashcard-word-english">Macera</div>
+                            <div class="text-xs text-emerald-800 italic mt-2">Harika bir telaffuz!</div>
                         </div>
                     </div>
 
                     <!-- Control Panel underneath -->
                     <div class="flex justify-between w-full max-w-sm mt-6 gap-3">
-                        <button onclick="triggerFlashcardResponse(false)" class="flex-1 pixel-btn-red py-2.5 text-xs pixel-heading">❌ Forgot</button>
-                        <button onclick="triggerFlashcardResponse(true)" class="flex-1 pixel-btn-green py-2.5 text-xs pixel-heading">✨ Mastered (+5 XP)</button>
+                        <button onclick="triggerFlashcardResponse(false)" class="flex-1 pixel-btn-red py-2.5 text-xs pixel-heading">❌ Unuttum</button>
+                        <button onclick="triggerFlashcardResponse(true)" class="flex-1 pixel-btn-green py-2.5 text-xs pixel-heading">✨ Öğrendim (+5 TP)</button>
                     </div>
                 </div>
             </div>
@@ -581,20 +576,20 @@
             <div id="scene-battle" class="absolute inset-0 hidden flex-col justify-between p-4 bg-[#14121a] z-20">
                 <!-- Battle Stage Header -->
                 <div class="flex justify-between items-center mb-2 border-b border-cyan-900 pb-2 shrink-0">
-                    <span class="pixel-heading text-cyan-300"><i class="fa-solid fa-wand-magic-sparkles text-sm"></i> SPELLCASTING BATTLE</span>
-                    <button onclick="confirmExitBattle()" class="pixel-btn-red py-1 px-3 text-xs">Run Away</button>
+                    <span class="pixel-heading text-cyan-300"><i class="fa-solid fa-wand-magic-sparkles text-sm"></i> BÜYÜ SAVAŞI SAHNESİ</span>
+                    <button onclick="confirmExitBattle()" class="pixel-btn-red py-1 px-3 text-xs">Kaç!</button>
                 </div>
 
-                <!-- Battleground (Player Avatar and the monster/Slime) -->
+                <!-- Battleground -->
                 <div class="flex-1 flex flex-col justify-between p-2 relative bg-gradient-to-b from-[#13111c] to-[#252033] rounded border border-cyan-950 overflow-hidden">
                     
                     <!-- Top Combatant: Grammar Slime -->
                     <div class="flex justify-between items-start">
                         <!-- Slime Stats left -->
                         <div class="stone-panel p-2 text-xs rounded border border-cyan-800 bg-neutral-900/90 w-44">
-                            <div class="font-bold text-fuchsia-400 pixel-heading text-[10px]">Lv 3 Slime Wizard</div>
+                            <div class="font-bold text-fuchsia-400 pixel-heading text-[10px]">Sv 3 Gramer Balçığı</div>
                             <div class="flex items-center gap-1.5 mt-1 font-semibold text-neutral-200">
-                                <i class="fa-solid fa-heart text-red-500"></i> HP: <span id="enemy-hp">100</span>/100
+                                <i class="fa-solid fa-heart text-red-500"></i> CAN: <span id="enemy-hp">100</span>/100
                             </div>
                             <div class="w-full bg-[#1c1009] h-2 border border-cyan-950 rounded p-0.5 mt-1">
                                 <div id="enemy-hp-bar" class="bg-fuchsia-500 h-full w-[100%] transition-all duration-300"></div>
@@ -604,7 +599,6 @@
                         <!-- Animated Slime SVG right -->
                         <div class="w-24 h-24 flex items-center justify-center relative">
                             <svg viewBox="0 0 100 100" class="w-full h-full float-hover" id="enemy-slime-svg">
-                                <!-- Glowing pixel magic slime -->
                                 <ellipse cx="50" cy="65" rx="35" ry="25" fill="#ca2bba" stroke="#1a120c" stroke-width="4"/>
                                 <ellipse cx="50" cy="55" rx="33" ry="20" fill="#f05bdf" />
                                 <ellipse cx="38" cy="58" rx="4" ry="4" fill="#1a120c"/>
@@ -618,15 +612,13 @@
                     <!-- Bottom Combatant: Player Spellcaster -->
                     <div class="flex justify-between items-end">
                         <!-- Player Sprite Left -->
-                        <div id="battle-player-sprite" class="w-24 h-24 flex items-center justify-center relative">
-                            <!-- Populated with SVG of active avatar style dynamically -->
-                        </div>
+                        <div id="battle-player-sprite" class="w-24 h-24 flex items-center justify-center relative"></div>
 
                         <!-- Player Combat Stats right -->
                         <div class="stone-panel p-2 text-xs rounded border border-green-800 bg-neutral-900/90 w-44">
-                            <div class="font-bold text-green-400 pixel-heading text-[10px]">Spellslinger (You)</div>
+                            <div class="font-bold text-green-400 pixel-heading text-[10px]">Savaşçı (Sen)</div>
                             <div class="flex items-center gap-1.5 mt-1 font-semibold text-neutral-200">
-                                <i class="fa-solid fa-heart text-red-500"></i> HP: <span id="player-hp">100</span>/100
+                                <i class="fa-solid fa-heart text-red-500"></i> CAN: <span id="player-hp">100</span>/100
                             </div>
                             <div class="w-full bg-[#1c1009] h-2 border border-green-950 rounded p-0.5 mt-1">
                                 <div id="player-hp-bar" class="bg-green-500 h-full w-[100%] transition-all duration-300"></div>
@@ -634,28 +626,26 @@
                         </div>
                     </div>
 
-                    <!-- Ambient spell particle effects canvas/container -->
-                    <div id="spell-cast-fx-container" class="absolute inset-0 pointer-events-none flex items-center justify-center">
-                        <!-- Triggered spell impact text overlays -->
-                    </div>
+                    <!-- Ambient spell particle effects -->
+                    <div id="spell-cast-fx-container" class="absolute inset-0 pointer-events-none flex items-center justify-center"></div>
                 </div>
 
                 <!-- Spell Selection panel underneath (Grammar Riddle) -->
                 <div class="shrink-0 wood-panel p-3.5 mt-2 rounded-lg">
                     <div class="text-[11px] text-[#ca95f2] pixel-heading mb-2 uppercase tracking-widest flex justify-between">
-                        <span>Select the Correct Spell:</span>
-                        <span>Cast German Words!</span>
+                        <span>Doğru Kelime Büyüsünü Seç:</span>
+                        <span>Düşmanı alt et!</span>
                     </div>
 
                     <!-- Sentence Prompt question box -->
                     <div class="bg-[#181122] border border-cyan-950 p-2.5 rounded text-sm text-stone-200 mb-3 min-h-[50px] flex items-center justify-center text-center font-semibold">
-                        <span id="battle-sentence-prompt">Translate: "He plays with the cat"</span>
+                        <span id="battle-sentence-prompt">Çevir: "O kediyle oynuyor"</span>
                     </div>
 
                     <!-- Spell Choices grid buttons -->
                     <div class="grid grid-cols-1 gap-2" id="battle-choices-container">
-                        <button onclick="castBattleSpell(0)" class="pixel-btn-magic text-xs py-2 px-3 text-left w-full truncate">1. Er spielt mit der Katze (Dative)</button>
-                        <button onclick="castBattleSpell(1)" class="pixel-btn-magic text-xs py-2 px-3 text-left w-full truncate">2. Er spielt mit die Katze (Accusative)</button>
+                        <button onclick="castBattleSpell(0)" class="pixel-btn-magic text-xs py-2 px-3 text-left w-full truncate">1. Er spielt mit der Katze (Dativ)</button>
+                        <button onclick="castBattleSpell(1)" class="pixel-btn-magic text-xs py-2 px-3 text-left w-full truncate">2. Er spielt mit die Katze (Akkusativ)</button>
                     </div>
                 </div>
             </div>
@@ -663,19 +653,17 @@
             <!-- SCENE 9: THE QUEST BOARD -->
             <div id="scene-quests" class="absolute inset-0 hidden flex-col justify-between p-4 bg-[#231710] z-20">
                 <div class="flex justify-between items-center mb-2 border-b border-amber-900 pb-2 shrink-0">
-                    <span class="pixel-heading text-amber-400"><i class="fa-solid fa-scroll text-sm"></i> ADVENTURE LOG</span>
-                    <button onclick="switchScene('scene-village')" class="pixel-btn-red py-1 px-3 text-xs">Back</button>
+                    <span class="pixel-heading text-amber-400"><i class="fa-solid fa-scroll text-sm"></i> MACERA GÜNLÜĞÜ</span>
+                    <button onclick="switchScene('scene-village')" class="pixel-btn-red py-1 px-3 text-xs">Geri Git</button>
                 </div>
 
                 <div class="flex-1 overflow-y-auto space-y-4 pr-1">
                     <div class="bg-amber-950/40 border border-amber-900 p-2 text-xs rounded text-stone-300 text-center">
-                        Receive dynamic daily tasks from around the Kingdom. Translating them properly protects the villagers!
+                        Krallığın dört bir yanından gelen günlük görevleri kabul et. Cümleleri doğru tercüme ederek köylüleri koru!
                     </div>
 
                     <!-- Dynamic scrolling scrolls list -->
-                    <div class="space-y-3" id="quests-list-container">
-                        <!-- Quests populated by script -->
-                    </div>
+                    <div class="space-y-3" id="quests-list-container"></div>
                 </div>
             </div>
 
@@ -683,27 +671,27 @@
             <div id="popup-api" class="absolute inset-0 bg-black/80 z-50 flex items-center justify-center p-4 hidden">
                 <div class="wood-panel p-5 max-w-sm w-full rounded-xl space-y-4">
                     <div class="pixel-heading text-amber-400 text-sm border-b border-amber-950 pb-2 flex justify-between items-center">
-                        <span><i class="fa-solid fa-key"></i> API Config</span>
+                        <span><i class="fa-solid fa-key"></i> API Ayarları</span>
                         <button onclick="toggleGeminiSettings()" class="text-stone-400 hover:text-white">&times;</button>
                     </div>
                     <p class="text-xs text-stone-300">
-                        Enter your Gemini API Key to enable infinite, real-time AI conversation with the NPCs! Leave empty to use simulated AI text.
+                        Han sakinleriyle gerçek zamanlı, canlı Almanca sohbetler gerçekleştirmek için Gemini API anahtarını buraya ekleyebilirsin. Boş bırakırsan sistem simülasyon yanıtları üretecektir.
                     </p>
                     <div class="space-y-1">
                         <label class="text-xs text-amber-400 block font-bold">Gemini API Key:</label>
                         <input type="password" id="txt-gemini-key" placeholder="AIzaSy..." class="w-full bg-[#1c1009] border-2 border-amber-950 text-sm p-2 rounded text-stone-100">
                     </div>
                     <div class="flex justify-between gap-3">
-                        <button onclick="saveApiKey()" class="pixel-btn-green py-2 px-4 text-xs flex-1">Save Key</button>
-                        <button onclick="toggleGeminiSettings()" class="pixel-btn-red py-2 px-4 text-xs flex-1">Cancel</button>
+                        <button onclick="saveApiKey()" class="pixel-btn-green py-2 px-4 text-xs flex-1">Kaydet</button>
+                        <button onclick="toggleGeminiSettings()" class="pixel-btn-red py-2 px-4 text-xs flex-1">İptal</button>
                     </div>
                 </div>
             </div>
 
-            <!-- Global Toast / Alert message overlay -->
+            <!-- Global Toast -->
             <div id="toast-message" class="absolute bottom-4 left-4 right-4 bg-amber-950 text-amber-100 p-3 rounded border-2 border-amber-500 z-[999] text-xs font-bold shadow-2xl flex items-center gap-2 transform translate-y-24 opacity-0 transition-all duration-300">
                 <span class="text-xl shrink-0" id="toast-icon">✨</span>
-                <span id="toast-text">Adventurer level increased!</span>
+                <span id="toast-text">Maceracı Seviyesi Yükseldi!</span>
             </div>
 
         </div>
@@ -715,14 +703,14 @@
                 <button onclick="toggleMuteBgm()" class="bg-neutral-800 hover:bg-neutral-700 p-2 rounded text-neutral-300 border border-neutral-700 flex items-center justify-center w-8 h-8" id="btn-audio-mute">
                     <i class="fa-solid fa-music"></i>
                 </button>
-                <span class="text-[10px] tracking-wider uppercase font-semibold text-neutral-400">Cozy Music</span>
+                <span class="text-[10px] tracking-wider uppercase font-semibold text-neutral-400">Arka Plan Müzik</span>
             </div>
 
             <!-- Dynamic Atmospheric toggle triggers -->
             <div class="flex items-center gap-2">
-                <span class="text-[10px] tracking-wider uppercase font-semibold text-neutral-400">Atmosphere</span>
+                <span class="text-[10px] tracking-wider uppercase font-semibold text-neutral-400">Atmosfer</span>
                 <button onclick="cycleAtmosphericWeather()" id="btn-weather-trigger" class="bg-neutral-800 hover:bg-neutral-700 p-1 px-2.5 rounded text-sky-300 border border-neutral-700 text-[10px]">
-                    🍃 Forest Leaves
+                    🍃 Orman Yaprakları
                 </button>
             </div>
         </div>
@@ -731,14 +719,13 @@
 
     <!-- AUDIO CONTROLLER SCRIPTS -->
     <script>
-        // Retro sound effects Synthesizer class using standard Web Audio API (absolutely zero dependencies or external audio asset URLs)
         class SoundEngine {
             constructor() {
                 this.audioCtx = null;
                 this.bgmInterval = null;
                 this.isMuted = true;
-                this.tempo = 140; // BPM
-                this.notes = [261.63, 293.66, 329.63, 349.23, 392.00, 440.00, 493.88, 523.25]; // C major scale
+                this.tempo = 140;
+                this.notes = [261.63, 293.66, 329.63, 349.23, 392.00, 440.00, 493.88, 523.25]; // C major
             }
 
             init() {
@@ -747,7 +734,6 @@
                 }
             }
 
-            // Synth short high-pitched click sound
             playClick() {
                 if (this.isMuted) return;
                 this.init();
@@ -766,13 +752,11 @@
                 osc.stop(this.audioCtx.currentTime + 0.16);
             }
 
-            // Synth happy double tone ascension sound
             playXpSound() {
                 if (this.isMuted) return;
                 this.init();
                 const t = this.audioCtx.currentTime;
                 
-                // Tone 1
                 const osc1 = this.audioCtx.createOscillator();
                 const gain1 = this.audioCtx.createGain();
                 osc1.type = 'square';
@@ -784,7 +768,6 @@
                 osc1.start(t);
                 osc1.stop(t + 0.11);
 
-                // Tone 2 (shifted upward)
                 const osc2 = this.audioCtx.createOscillator();
                 const gain2 = this.audioCtx.createGain();
                 osc2.type = 'square';
@@ -797,7 +780,6 @@
                 osc2.stop(t + 0.26);
             }
 
-            // Synthesizes a spell cast swoosh
             playSpellSound() {
                 if (this.isMuted) return;
                 this.init();
@@ -816,7 +798,6 @@
                 osc.stop(this.audioCtx.currentTime + 0.46);
             }
 
-            // Combat low frequency impact thump
             playHitSound() {
                 if (this.isMuted) return;
                 this.init();
@@ -835,12 +816,11 @@
                 osc.stop(this.audioCtx.currentTime + 0.31);
             }
 
-            // Positive major triad arpeggio celebration sound
             playSuccessSound() {
                 if (this.isMuted) return;
                 this.init();
                 const t = this.audioCtx.currentTime;
-                const noteSequence = [523.25, 659.25, 783.99, 1046.50]; // C5, E5, G5, C6
+                const noteSequence = [523.25, 659.25, 783.99, 1046.50];
                 
                 noteSequence.forEach((freq, idx) => {
                     const osc = this.audioCtx.createOscillator();
@@ -856,13 +836,11 @@
                 });
             }
 
-            // Cozy lofi retro 8-bit melody progression loops
             startCozyBgm() {
                 this.init();
                 if (this.bgmInterval) return;
                 
                 let beat = 0;
-                // Cozy retro chord progression sequence
                 const chordRoots = [196.00, 220.00, 164.81, 174.61]; // G3, A3, E3, F3
                 
                 this.bgmInterval = setInterval(() => {
@@ -872,7 +850,6 @@
                     const chordIndex = Math.floor(beat / 4) % chordRoots.length;
                     const rootFreq = chordRoots[chordIndex];
                     
-                    // Bass pulse
                     if (beat % 2 === 0) {
                         const osc = this.audioCtx.createOscillator();
                         const gain = this.audioCtx.createGain();
@@ -886,7 +863,6 @@
                         osc.stop(t + 0.41);
                     }
 
-                    // Soft random cozy melody notes
                     if (Math.random() > 0.4) {
                         const scaleOffset = [0, 2, 4, 7][Math.floor(Math.random() * 4)];
                         const melFreq = rootFreq * 2 * Math.pow(2, scaleOffset / 12);
@@ -903,7 +879,7 @@
                     }
 
                     beat++;
-                }, 350); // Loop beat timing
+                }, 350);
             }
 
             stopCozyBgm() {
@@ -917,12 +893,12 @@
         const sound = new SoundEngine();
     </script>
 
-    <!-- DYNAMIC FX VISUAL CANVAS SYSTEM (Ambient day/night, particles, weather presets) -->
+    <!-- DYNAMIC FX VISUAL CANVAS SYSTEM -->
     <script>
         const fxCanvas = document.getElementById('fx-canvas');
         const ctxFx = fxCanvas.getContext('2d');
         let particles = [];
-        let weatherMode = 'forest'; // 'forest', 'desert', 'snow', 'night'
+        let weatherMode = 'forest';
         
         function resizeFxCanvas() {
             fxCanvas.width = window.innerWidth;
@@ -945,22 +921,20 @@
                 this.rotation = Math.random() * 360;
                 this.spinSpeed = Math.random() * 2 - 1;
                 
-                // Color mapping based on weather presets
                 if (weatherMode === 'forest') {
                     const greenColors = ['#55ab5b', '#387a3e', '#79c47f', '#a3e2ab'];
                     this.color = greenColors[Math.floor(Math.random() * greenColors.length)];
                 } else if (weatherMode === 'desert') {
                     const desertColors = ['#fbd354', '#df9c26', '#e6af45', '#cf841d'];
                     this.color = desertColors[Math.floor(Math.random() * desertColors.length)];
-                    this.speedY = Math.random() * 0.6 + 0.2; // Slow sand drifting
-                    this.speedX = Math.random() * 1.5 + 0.5; // Wind blowing rightward
+                    this.speedY = Math.random() * 0.6 + 0.2;
+                    this.speedX = Math.random() * 1.5 + 0.5;
                 } else if (weatherMode === 'snow') {
                     this.color = '#ffffff';
                     this.speedY = Math.random() * 1.2 + 0.8;
                     this.speedX = Math.random() * 0.8 - 0.4;
                     this.size = Math.random() * 5 + 3;
                 } else if (weatherMode === 'night') {
-                    // Fireflies glow
                     this.color = '#79e5ff';
                     this.y = Math.random() * fxCanvas.height;
                     this.speedY = (Math.random() * 0.8 - 0.4);
@@ -974,11 +948,9 @@
                 this.y += this.speedY;
                 this.rotation += this.spinSpeed;
 
-                // Fireflies wiggle movement
                 if (weatherMode === 'night') {
                     this.speedX += (Math.random() * 0.2 - 0.1);
                     this.speedY += (Math.random() * 0.2 - 0.1);
-                    // Boundary control
                     if (this.x < 0 || this.x > fxCanvas.width || this.y < 0 || this.y > fxCanvas.height) {
                         this.reset();
                     }
@@ -996,12 +968,10 @@
                 ctxFx.fillStyle = this.color;
                 
                 if (weatherMode === 'snow' || weatherMode === 'night') {
-                    // Firefly/Snow circular path
                     ctxFx.beginPath();
                     ctxFx.arc(0, 0, this.size / 2, 0, Math.PI * 2);
                     ctxFx.fill();
                 } else {
-                    // Leaf / Pixel Sand diamond path shape
                     ctxFx.fillRect(-this.size/2, -this.size/2, this.size, this.size);
                 }
                 
@@ -1009,12 +979,10 @@
             }
         }
 
-        // Initialize particles array
         function initWeatherFX() {
             particles = [];
             for (let i = 0; i < 40; i++) {
                 const p = new LeafOrParticle();
-                // Randomize heights on start
                 p.y = Math.random() * fxCanvas.height;
                 particles.push(p);
             }
@@ -1031,22 +999,21 @@
             weatherMode = mode;
             const btn = document.getElementById('btn-weather-trigger');
             if (mode === 'forest') {
-                btn.innerHTML = '🍃 Forest Leaves';
+                btn.innerHTML = '🍃 Orman Yaprakları';
                 btn.className = 'bg-neutral-800 hover:bg-neutral-700 p-1 px-2.5 rounded text-green-400 border border-neutral-700 text-[10px]';
             } else if (mode === 'desert') {
-                btn.innerHTML = '🏜️ Desert Sand';
+                btn.innerHTML = '🏜️ Çöl Tozu';
                 btn.className = 'bg-neutral-800 hover:bg-neutral-700 p-1 px-2.5 rounded text-amber-400 border border-neutral-700 text-[10px]';
             } else if (mode === 'snow') {
-                btn.innerHTML = '❄️ Blizzard Snow';
+                btn.innerHTML = '❄️ Tipi Kar Yağışı';
                 btn.className = 'bg-neutral-800 hover:bg-neutral-700 p-1 px-2.5 rounded text-cyan-300 border border-neutral-700 text-[10px]';
             } else if (mode === 'night') {
-                btn.innerHTML = '✨ Night Fireflies';
+                btn.innerHTML = '✨ Gece Ateş Böcekleri';
                 btn.className = 'bg-neutral-800 hover:bg-neutral-700 p-1 px-2.5 rounded text-purple-300 border border-neutral-700 text-[10px]';
             }
             initWeatherFX();
         }
 
-        // Animation Loop
         function animateWeatherParticles() {
             ctxFx.clearRect(0, 0, fxCanvas.width, fxCanvas.height);
             particles.forEach(p => {
@@ -1056,14 +1023,12 @@
             requestAnimationFrame(animateWeatherParticles);
         }
 
-        // Run Particle simulation on window load
         initWeatherFX();
         animateWeatherParticles();
     </script>
 
     <!-- CORE GAME DATA & RPG PROGRESSION ENGINE -->
     <script>
-        // Game state variables
         const state = {
             level: 1,
             xp: 0,
@@ -1072,11 +1037,11 @@
             streak: 3,
             apiKey: localStorage.getItem('gemini_api_key') || '',
             avatar: {
-                hairStyle: 'Short Spike',
-                hairColor: 'Silver',
-                outfit: 'Forest Tunic',
-                pet: 'None',
-                backItem: 'None'
+                hairStyle: 'Kısa Dikenli',
+                hairColor: 'Gümüş',
+                outfit: 'Orman Tunisi',
+                pet: 'Yok',
+                backItem: 'Yok'
             },
             inventory: [],
             currentNpc: 'gunter',
@@ -1085,85 +1050,83 @@
                 enemyHp: 100,
                 currentRiddle: null
             },
-            timeOfDay: 'day', // 'day', 'sunset', 'night'
+            timeOfDay: 'day',
             activeQuests: []
         };
 
-        // Static databases of game items
         const avatarOptions = {
-            hairStyle: ['Short Spike', 'Royal Crown', 'Sorcerer Hood', 'Flowing Locks'],
-            hairColor: ['Silver', 'Gold Star', 'Midnight Obsidian', 'Crimson Flare'],
-            outfit: ['Forest Tunic', 'Iron Knight Plate', 'Rogue Silk Cloak', 'High Archmage Robes'],
-            pet: ['None', 'Cute Forest Slime', 'Ancient Tiny Dragon', 'Fairy Phoenix'],
-            backItem: ['None', 'Mystical Longsword', 'Enchanted Arch-Staff', 'Fairy Wings']
+            hairStyle: ['Kısa Dikenli', 'Kraliyet Tacı', 'Büyücü Başlığı', 'Dalgalı Saçlar'],
+            hairColor: ['Gümüş', 'Altın Sarısı', 'Gece Siyahı', 'Kızıl Ateş'],
+            outfit: ['Orman Tunisi', 'Şövalye Zırhı', 'İpek Pelerin', 'Yüce Büyücü Cüppesi'],
+            pet: ['Yok', 'Yeşil Orman Balçığı', 'Antik Küçük Ejderha', 'Anka Kuşu'],
+            backItem: ['Yok', 'Mistik Kılıç', 'Kutsal Büyücü Asası', 'Peri Kanatları']
         };
 
         const shopItems = [
-            { id: 'item_sword', name: 'Mystic Sword', category: 'backItem', cost: 40, emoji: '🗡️', desc: 'Slashes grammar errors down instantly.' },
-            { id: 'item_slime', name: 'Cute Forest Slime', category: 'pet', cost: 60, emoji: '🟢', desc: 'A jelly companion that loves German.' },
-            { id: 'item_dragon', name: 'Ancient Tiny Dragon', category: 'pet', cost: 120, emoji: '🐉', desc: 'Breathes grammatical flame spells!' },
-            { id: 'item_hood', name: 'Sorcerer Hood', category: 'hairStyle', cost: 50, emoji: '🧙', desc: 'Warm hood radiating high wisdom levels.' },
-            { id: 'item_robe', name: 'High Archmage Robes', category: 'outfit', cost: 90, emoji: '🔮', desc: 'Increases correct preposition rates.' }
+            { id: 'item_sword', name: 'Mistik Kılıç', category: 'backItem', cost: 40, emoji: '🗡️', desc: 'Dil bilgisi hatalarını anında kesip atar.' },
+            { id: 'item_slime', name: 'Orman Balçığı', category: 'pet', cost: 60, emoji: '🟢', desc: 'Almanca öğrenmeyi çok seven jel gibi bir yoldaş.' },
+            { id: 'item_dragon', name: 'Antik Küçük Ejderha', category: 'pet', cost: 120, emoji: '🐉', desc: 'Dil bilgisi büyüleriyle alevler püskürtür!' },
+            { id: 'item_hood', name: 'Büyücü Başlığı', category: 'hairStyle', cost: 50, emoji: '🧙', desc: 'Yüksek bilgelik yayan sıcak bir büyücü başlığı.' },
+            { id: 'item_robe', name: 'Yüce Büyücü Cüppesi', category: 'outfit', cost: 90, emoji: '🔮', desc: 'Doğru edat (preposition) kullanım şansını artırır.' }
         ];
 
-        // Grammar challenges for Turn-Based Battle (Academy)
+        // Grammar challenges designed specifically for Turkish native speakers (German Dative/Accusative/Word order structure)
         const battleRiddles = [
             {
-                prompt: 'Complete: "Er wohnt ___ Berlin."',
-                choices: ['in (Correct Preposition)', 'nach', 'an'],
+                prompt: 'Boşluğu doldur: "Er wohnt ___ Berlin."',
+                choices: ['in (Berlin\'de anlamına gelir - Doğru)', 'nach', 'an'],
                 correct: 0,
                 damage: 35
             },
             {
-                prompt: 'Accusative check: "Ich suche den ___ (Hund)."',
-                choices: ['Hund (Accusative: den)', 'Hundes', 'Hunde'],
+                prompt: 'Belirtme Hali (Akkusativ): "Ich suche den ___ (Hund)." (Köpeği arıyorum)',
+                choices: ['Hund (den köpek için belirtme ekidir - Doğru)', 'Hundes', 'Hunde'],
                 correct: 0,
                 damage: 35
             },
             {
-                prompt: 'Dative check: "Ich helfe ___ Kind (n)."',
-                choices: ['dem (Dative neutral: dem)', 'das', 'den'],
+                prompt: 'Yönelme Hali (Dativ): "Ich helfe ___ Kind (n)." (Çocuğa yardım ediyorum)',
+                choices: ['dem (Kind nötrdür, Dativ hali "dem" olur - Doğru)', 'das', 'den'],
                 correct: 0,
                 damage: 40
             },
             {
-                prompt: 'Spell Order: "Today I am learning German."',
+                prompt: 'Cümle Dizilimi: "Bugün Almanca öğreniyorum."',
                 choices: ['Heute lerne ich Deutsch.', 'Heute ich lerne Deutsch.', 'Ich heute lerne Deutsch.'],
                 correct: 0,
                 damage: 45
             },
             {
-                prompt: 'Translate: "The red apples"',
+                prompt: 'Çevir: "Kırmızı elmalar"',
                 choices: ['die roten Äpfel', 'der rote Apfel', 'die rote Äpfel'],
                 correct: 0,
                 damage: 40
             }
         ];
 
-        // Daily Translation Quests from Quest Board
+        // Daily Translation Quests from Quest Board (Turkish to German)
         const questDatabase = [
-            { id: 'q1', title: 'The Baker\'s Request', text: 'Translate "Ich möchte Brot kaufen."', solution: 'I want to buy bread', xpReward: 25, coinReward: 20 },
-            { id: 'q2', title: 'Lost Directions', text: 'Translate "Wo ist der Bahnhof?"', solution: 'Where is the train station', xpReward: 30, coinReward: 25 },
-            { id: 'q3', title: 'Midnight Brew', text: 'Translate "Zwei Tassen Kaffee, bitte."', solution: 'Two cups of coffee, please', xpReward: 30, coinReward: 25 }
+            { id: 'q1', title: 'Fırıncının Ricası', text: '"Ich möchte Brot kaufen." cümlesinin Türkçe çevirisi hangisidir?', solution: 'ekmek satın almak istiyorum', xpReward: 25, coinReward: 20 },
+            { id: 'q2', title: 'Kayıp Yolcu', text: '"Wo ist der Bahnhof?" cümlesinin Türkçe çevirisi hangisidir?', solution: 'tren istasyonu nerede', xpReward: 30, coinReward: 25 },
+            { id: 'q3', title: 'Gece Kahvesi', text: '"Zwei Tassen Kaffee, bitte." cümlesinin Türkçe karşılığı nedir?', solution: 'iki fincan kahve lütfen', xpReward: 30, coinReward: 25 }
         ];
 
-        // Flashcards DB
+        // German to Turkish Flashcards
         const flashcards = [
-            { de: 'Das Abenteuer', en: 'The Adventure' },
-            { de: 'Der Wald', en: 'The Forest' },
-            { de: 'Der Zauberspruch', en: 'The Magic Spell' },
-            { de: 'Der Drache', en: 'The Dragon' },
-            { de: 'Der Schatz', en: 'The Treasure' },
-            { de: 'Das Schloss', en: 'The Castle' },
-            { de: 'Die Königin', en: 'The Queen' },
-            { de: 'Der Magier', en: 'The Mage' },
-            { de: 'Das Buch', en: 'The Book' },
-            { de: 'Der Ritter', en: 'The Knight' }
+            { de: 'Das Abenteuer', en: 'Macera' },
+            { de: 'Der Wald', en: 'Orman' },
+            { de: 'Der Zauberspruch', en: 'Büyülü Söz / Tılsım' },
+            { de: 'Der Drache', en: 'Ejderha' },
+            { de: 'Der Schatz', en: 'Hazine' },
+            { de: 'Das Schloss', en: 'Şato / Kale' },
+            { de: 'Die Königin', en: 'Kraliçe' },
+            { de: 'Der Magier', en: 'Büyücü' },
+            { de: 'Das Buch', en: 'Kitap' },
+            { de: 'Der Ritter', en: 'Şövalye' }
         ];
         let currentFlashcardIdx = 0;
         let isFlashcardFlipped = false;
 
-        // Custom Dynamic Pixel Avatar Renderer (Creates fully layered SVG character sprite dynamically)
         function drawAvatarSvg() {
             const hStyle = state.avatar.hairStyle;
             const hColor = state.avatar.hairColor;
@@ -1171,82 +1134,67 @@
             const pet = state.avatar.pet;
             const backItem = state.avatar.backItem;
 
-            // Set hex values
-            let hHex = '#ffe04a'; // Gold
-            if (hColor === 'Silver') hHex = '#d1d5db';
-            if (hColor === 'Midnight Obsidian') hHex = '#111827';
-            if (hColor === 'Crimson Flare') hHex = '#ef4444';
+            let hHex = '#ffe04a';
+            if (hColor === 'Gümüş') hHex = '#d1d5db';
+            if (hColor === 'Gece Siyahı') hHex = '#111827';
+            if (hColor === 'Kızıl Ateş') hHex = '#ef4444';
 
-            let outfitHex = '#16a34a'; // Tunic green
-            if (outfit === 'Iron Knight Plate') outfitHex = '#9ca3af';
-            if (outfit === 'Rogue Silk Cloak') outfitHex = '#1e293b';
-            if (outfit === 'High Archmage Robes') outfitHex = '#7c3aed';
+            let outfitHex = '#16a34a';
+            if (outfit === 'Şövalye Zırhı') outfitHex = '#9ca3af';
+            if (outfit === 'İpek Pelerin') outfitHex = '#1e293b';
+            if (outfit === 'Yüce Büyücü Cüppesi') outfitHex = '#7c3aed';
 
             let petEmoji = '';
-            if (pet === 'Cute Forest Slime') petEmoji = '🟢';
-            if (pet === 'Ancient Tiny Dragon') petEmoji = '🐉';
-            if (pet === 'Fairy Phoenix') petEmoji = '🐦';
+            if (pet === 'Yeşil Orman Balçığı') petEmoji = '🟢';
+            if (pet === 'Antik Küçük Ejderha') petEmoji = '🐉';
+            if (pet === 'Anka Kuşu') petEmoji = '🐦';
 
             let backItemEmoji = '';
-            if (backItem === 'Mystical Longsword') backItemEmoji = '🗡️';
-            if (backItem === 'Enchanted Arch-Staff') backItemEmoji = '🪄';
-            if (backItem === 'Fairy Wings') backItemEmoji = '🦋';
+            if (backItem === 'Mistik Kılıç') backItemEmoji = '🗡️';
+            if (backItem === 'Kutsal Büyücü Asası') backItemEmoji = '🪄';
+            if (backItem === 'Peri Kanatları') backItemEmoji = '🦋';
 
             const svgHtml = `
                 <svg viewBox="0 0 100 100" class="w-full h-full">
-                    <!-- Background aura -->
                     <circle cx="50" cy="50" r="45" fill="none" stroke="#251b3d" stroke-dasharray="4" stroke-width="2"/>
-                    
-                    <!-- Back Item -->
                     ${backItemEmoji ? `<text x="70" y="55" font-size="28" class="float-hover">${backItemEmoji}</text>` : ''}
-                    
-                    <!-- Body Base -->
                     <rect x="38" y="45" width="24" height="35" fill="${outfitHex}" stroke="#1a120c" stroke-width="4"/>
-                    <!-- Skin head -->
                     <rect x="40" y="25" width="20" height="20" fill="#fcd34d" stroke="#1a120c" stroke-width="4"/>
-                    
-                    <!-- Eyes -->
                     <rect x="44" y="32" width="2" height="3" fill="#10b981"/>
                     <rect x="54" y="32" width="2" height="3" fill="#10b981"/>
 
-                    <!-- Hair styling layers -->
-                    ${hStyle === 'Short Spike' ? `
+                    ${hStyle === 'Kısa Dikenli' ? `
                         <rect x="38" y="19" width="24" height="8" fill="${hHex}" stroke="#1a120c" stroke-width="3"/>
                         <polygon points="38,19 44,12 48,19" fill="${hHex}" stroke="#1a120c" stroke-width="2"/>
                         <polygon points="48,19 54,12 58,19" fill="${hHex}" stroke="#1a120c" stroke-width="2"/>
                         <polygon points="56,19 62,12 64,19" fill="${hHex}" stroke="#1a120c" stroke-width="2"/>
                     ` : ''}
 
-                    ${hStyle === 'Royal Crown' ? `
+                    ${hStyle === 'Kraliyet Tacı' ? `
                         <rect x="38" y="22" width="24" height="4" fill="${hHex}"/>
                         <rect x="41" y="14" width="18" height="10" fill="#df9c26" stroke="#1a120c" stroke-width="3"/>
                         <polygon points="41,14 45,6 50,14 55,6 59,14" fill="#fbd354" stroke="#1a120c" stroke-width="2"/>
                     ` : ''}
 
-                    ${hStyle === 'Sorcerer Hood' ? `
-                        <!-- Magic wizard hood wrapper -->
+                    ${hStyle === 'Büyücü Başlığı' ? `
                         <path d="M36,22 Q50,6 64,22 L64,45 L36,45 Z" fill="${outfitHex}" stroke="#1a120c" stroke-width="4"/>
-                        <!-- Skin view gap -->
                         <rect x="41" y="25" width="18" height="18" fill="#fcd34d"/>
                         <rect x="44" y="32" width="2" height="3" fill="#10b981"/>
                         <rect x="54" y="32" width="2" height="3" fill="#10b981"/>
                     ` : ''}
 
-                    ${hStyle === 'Flowing Locks' ? `
+                    ${hStyle === 'Dalgalı Saçlar' ? `
                         <rect x="36" y="20" width="28" height="32" fill="${hHex}" stroke="#1a120c" stroke-width="3"/>
-                        <!-- Inner face overlap -->
                         <rect x="41" y="25" width="18" height="18" fill="#fcd34d"/>
                         <rect x="44" y="32" width="2" height="3" fill="#10b981"/>
                         <rect x="54" y="32" width="2" height="3" fill="#10b981"/>
                     ` : ''}
 
-                    <!-- Companion Pet -->
                     ${petEmoji ? `<text x="12" y="70" font-size="24" class="float-hover">${petEmoji}</text>` : ''}
                 </svg>
             `;
 
             document.getElementById('avatar-render-svg').innerHTML = svgHtml;
-            // Update battle sprites automatically
             const battlePlayerBox = document.getElementById('battle-player-sprite');
             if (battlePlayerBox) {
                 battlePlayerBox.innerHTML = svgHtml;
@@ -1256,11 +1204,9 @@
 
     <!-- SCENE MANAGER & SCREEN NAVIGATION CONTROLS -->
     <script>
-        // Smoothly transitions between scenes
         function switchScene(sceneId) {
             sound.playClick();
             
-            // Hide all scenes
             const scenes = [
                 'scene-welcome', 'scene-village', 'scene-avatar', 
                 'scene-map', 'scene-market', 'scene-inn', 
@@ -1271,17 +1217,14 @@
                 if (s) s.classList.add('hidden');
             });
 
-            // Show target scene
             const target = document.getElementById(sceneId);
             if (target) {
                 target.classList.remove('hidden');
             }
 
-            // Sync visual avatar state across views
             drawAvatarSvg();
         }
 
-        // Cycle time overlay triggers
         function cycleTimeOfDay() {
             const sky = document.getElementById('village-sky');
             const indicator = document.getElementById('time-indicator');
@@ -1289,20 +1232,20 @@
             if (state.timeOfDay === 'day') {
                 state.timeOfDay = 'sunset';
                 sky.className = "absolute inset-0 bg-gradient-to-b from-orange-500 to-[#1e1009] opacity-80 z-0";
-                indicator.innerHTML = "🌅 Sunset (Abend)";
-                showToast("Cozy twilight settles over the Village.", "🌅");
-                setWeatherPreset('desert'); // Orange amber sand particles
+                indicator.innerHTML = "🌅 Gün Batımı (Abend)";
+                showToast("Köye tatlı bir akşam kızıllığı çöküyor.", "🌅");
+                setWeatherPreset('desert');
             } else if (state.timeOfDay === 'sunset') {
                 state.timeOfDay = 'night';
                 sky.className = "absolute inset-0 bg-gradient-to-b from-[#1b1736] to-[#04010a] opacity-90 z-0";
-                indicator.innerHTML = "🌌 Nacht (Night)";
-                showToast("The glowing crystals fireflies awake.", "✨");
+                indicator.innerHTML = "🌌 Gece (Nacht)";
+                showToast("Ateş böcekleri ışıklarını yakıyor.", "✨");
                 setWeatherPreset('night');
             } else {
                 state.timeOfDay = 'day';
                 sky.className = "absolute inset-0 bg-gradient-to-b from-sky-400 to-[#2d5c34] opacity-80 z-0";
-                indicator.innerHTML = "☀️ Tag (Day)";
-                showToast("A new day dawns for magic spellcasting!", "☀️");
+                indicator.innerHTML = "☀️ Gündüz (Tag)";
+                showToast("Köyde büyü dolu yepyeni bir gün başlıyor!", "☀️");
                 setWeatherPreset('forest');
             }
         }
@@ -1311,20 +1254,17 @@
             cycleTimeOfDay();
         });
 
-        // Initialize and lock screen adjustments
         document.getElementById('btn-start-adventure').addEventListener('click', () => {
             switchScene('scene-village');
-            // Play background theme
             sound.isMuted = false;
             sound.startCozyBgm();
             updateAudioMuteIcon();
-            showToast("Welcome to schATZ, brave Spellcaster! Let's explore.", "🏰");
+            showToast("schATZ Köyü'ne hoş geldin, cesur büyücü!", "🏰");
         });
     </script>
 
     <!-- QUEST LOG & SYSTEM FUNCTIONS -->
     <script>
-        // Reward Player XP and Level Up Logic
         function rewardPlayerXp(amount) {
             state.xp += amount;
             sound.playXpSound();
@@ -1334,13 +1274,11 @@
                 state.level++;
                 state.xpNeeded = Math.floor(state.xpNeeded * 1.5);
                 sound.playSuccessSound();
-                showToast(`Level Up! You reached Level ${state.level}!`, "👑");
+                showToast(`Seviye Atladın! Artık ${state.level}. Seviyesin!`, "👑");
                 
-                // Unlock dynamic areas on Level Up
                 checkBiomeLocks();
             }
 
-            // Sync visual stats top-bar
             document.getElementById('player-level').innerText = state.level;
             document.getElementById('player-xp').innerText = state.xp;
             document.getElementById('player-xp-needed').innerText = state.xpNeeded;
@@ -1354,7 +1292,6 @@
             document.getElementById('player-coins').innerText = state.coins;
         }
 
-        // Checks map requirements
         function checkBiomeLocks() {
             const desertCont = document.getElementById('biome-desert-container');
             const desertLock = document.getElementById('biome-desert-lock');
@@ -1362,7 +1299,7 @@
 
             if (state.level >= 5) {
                 desertCont.classList.remove('opacity-60');
-                desertLock.innerHTML = '🟢 Unlocked';
+                desertLock.innerHTML = '🟢 Keşfe Açık';
                 desertLock.className = 'text-[11px] text-green-400 bg-amber-950/80 p-1 px-2 rounded inline-block mt-1';
                 desertBtn.removeAttribute('disabled');
                 desertBtn.classList.remove('opacity-50', 'cursor-not-allowed');
@@ -1374,7 +1311,7 @@
 
             if (state.level >= 10) {
                 snowCont.classList.remove('opacity-60');
-                snowLock.innerHTML = '🟢 Unlocked';
+                snowLock.innerHTML = '🟢 Keşfe Açık';
                 snowLock.className = 'text-[11px] text-green-400 bg-blue-950/80 p-1 px-2 rounded inline-block mt-1';
                 snowBtn.removeAttribute('disabled');
                 snowBtn.classList.remove('opacity-50', 'cursor-not-allowed');
@@ -1386,24 +1323,22 @@
 
             if (state.level >= 15) {
                 mushCont.classList.remove('opacity-60');
-                mushLock.innerHTML = '🟢 Unlocked';
+                mushLock.innerHTML = '🟢 Keşfe Açık';
                 mushLock.className = 'text-[11px] text-green-400 bg-purple-950/80 p-1 px-2 rounded inline-block mt-1';
                 mushBtn.removeAttribute('disabled');
                 mushBtn.classList.remove('opacity-50', 'cursor-not-allowed');
             }
         }
 
-        // Travel Map Biomes setup
         function setWorldMapWeather(biome) {
             sound.playClick();
             if (biome === 'forest') {
                 setWeatherPreset('forest');
-                showToast("Drifting cozy forest leaves activated!", "🍃");
+                showToast("Orman yaprağı süzülmesi aktif edildi!", "🍃");
             }
             switchScene('scene-village');
         }
 
-        // Global Toast feedback box
         function showToast(text, icon = "✨") {
             const toast = document.getElementById('toast-message');
             const tText = document.getElementById('toast-text');
@@ -1412,7 +1347,6 @@
             tText.innerText = text;
             tIcon.innerText = icon;
 
-            // Slide upwards
             toast.classList.remove('translate-y-24', 'opacity-0');
             toast.classList.add('translate-y-0', 'opacity-100');
 
@@ -1425,7 +1359,6 @@
 
     <!-- AVATAR MAKER CONTROLLER FUNCTIONS -->
     <script>
-        // Cycle active styles in character customization
         function changeAvatarFeature(feature, direction) {
             sound.playClick();
             const options = avatarOptions[feature];
@@ -1437,38 +1370,33 @@
 
             state.avatar[feature] = options[nextIdx];
             
-            // Sync custom labels
             document.getElementById(`lbl-${feature}`).innerText = options[nextIdx];
             
-            // Re-render immediately
             drawAvatarSvg();
         }
 
         function saveAvatarAndNotify() {
             sound.playSuccessSound();
-            showToast("Your cozy spellcaster customization is saved!", "🛡️");
+            showToast("Piksel kahramanının yeni tarzı kaydedildi!", "🛡️");
             switchScene('scene-village');
         }
     </script>
 
-    <!-- SPELLCASTING BATTLE MECHANICS (Academy of Spells) -->
+    <!-- SPELLCASTING BATTLE MECHANICS -->
     <script>
         function initGrammarSlimeBattle() {
             sound.playClick();
             state.battle.playerHp = 100;
             state.battle.enemyHp = 100;
 
-            // Load a randomized riddle
             const rndIdx = Math.floor(Math.random() * battleRiddles.length);
             state.battle.currentRiddle = battleRiddles[rndIdx];
 
-            // Render stats visual
             document.getElementById('player-hp').innerText = 100;
             document.getElementById('player-hp-bar').style.width = '100%';
             document.getElementById('enemy-hp').innerText = 100;
             document.getElementById('enemy-hp-bar').style.width = '100%';
 
-            // Set riddle visual structure
             document.getElementById('battle-sentence-prompt').innerText = state.battle.currentRiddle.prompt;
             
             const btnContainer = document.getElementById('battle-choices-container');
@@ -1482,9 +1410,8 @@
                 btnContainer.appendChild(btn);
             });
 
-            // Transition
             switchScene('scene-battle');
-            showToast("A Wild Grammar Slime approaches!", "⚔️");
+            showToast("Vahşi bir Dil Bilgisi Balçığı belirdi!", "⚔️");
         }
 
         function castBattleSpell(selectedIndex) {
@@ -1492,45 +1419,40 @@
             const fxContainer = document.getElementById('spell-cast-fx-container');
 
             if (selectedIndex === riddle.correct) {
-                // Perfect correct spellcast!
                 sound.playSpellSound();
                 state.battle.enemyHp = Math.max(0, state.battle.enemyHp - riddle.damage);
                 document.getElementById('enemy-hp').innerText = state.battle.enemyHp;
                 document.getElementById('enemy-hp-bar').style.width = `${state.battle.enemyHp}%`;
 
-                // Damage indicator
-                fxContainer.innerHTML = `<span class="pixel-heading text-lg text-yellow-300 drop-shadow-[0_2px_0_black] animate-ping">⚡ CAST! -${riddle.damage} HP</span>`;
+                fxContainer.innerHTML = `<span class="pixel-heading text-lg text-yellow-300 drop-shadow-[0_2px_0_black] animate-ping">⚡ BÜYÜ YAPILDI! -${riddle.damage} CAN</span>`;
 
-                // Check battle victory
                 if (state.battle.enemyHp <= 0) {
                     setTimeout(() => {
                         sound.playSuccessSound();
                         rewardPlayerXp(35);
                         rewardPlayerCoins(15);
-                        showToast("You defeated the Grammar Slime! Earned +35 XP, +15 Gold", "🏆");
+                        showToast("Dil Bilgisi Balçığını Yendin! +35 TP, +15 Altın kazandın.", "🏆");
                         switchScene('scene-village');
                     }, 1200);
                     return;
                 }
             } else {
-                // Incorrect translation - Slime jumps and hits back
                 sound.playHitSound();
                 state.battle.playerHp = Math.max(0, state.battle.playerHp - 25);
                 document.getElementById('player-hp').innerText = state.battle.playerHp;
                 document.getElementById('player-hp-bar').style.width = `${state.battle.playerHp}%`;
 
-                fxContainer.innerHTML = `<span class="pixel-heading text-lg text-red-500 drop-shadow-[0_2px_0_black] animate-ping">💥 HIT! -25 HP</span>`;
+                fxContainer.innerHTML = `<span class="pixel-heading text-lg text-red-500 drop-shadow-[0_2px_0_black] animate-ping">💥 HASAR ALDIN! -25 CAN</span>`;
 
                 if (state.battle.playerHp <= 0) {
                     setTimeout(() => {
-                        showToast("Your magic reserves depleted! Retreating back to safety.", "💀");
+                        showToast("Büyü güçlerin tükendi! Güvenli köye geri çekiliyorsun.", "💀");
                         switchScene('scene-village');
                     }, 1200);
                     return;
                 }
             }
 
-            // Load next randomized spell riddle challenge after short delay
             setTimeout(() => {
                 fxContainer.innerHTML = '';
                 const rndIdx = Math.floor(Math.random() * battleRiddles.length);
@@ -1552,14 +1474,13 @@
 
         function confirmExitBattle() {
             sound.playClick();
-            showToast("Fled back to the main village square.", "🏃");
+            showToast("Savaş alanından köye kaçıldı.", "🏃");
             switchScene('scene-village');
         }
     </script>
 
     <!-- LIBRARY FLASHCARDS & DAILY QUEST BOARDS -->
     <script>
-        // Library Flashcards mechanics
         function initLibraryFlashcards() {
             sound.playClick();
             currentFlashcardIdx = 0;
@@ -1572,11 +1493,9 @@
             const card = flashcards[currentFlashcardIdx];
             document.getElementById('flashcard-current-index').innerText = currentFlashcardIdx + 1;
             
-            // Set values
             document.getElementById('flashcard-word-german').innerText = card.de;
             document.getElementById('flashcard-word-english').innerText = card.en;
 
-            // Start front face default
             document.getElementById('flashcard-front').classList.remove('hidden');
             document.getElementById('flashcard-back').classList.add('hidden');
             isFlashcardFlipped = false;
@@ -1601,22 +1520,20 @@
             sound.playClick();
             if (knewIt) {
                 rewardPlayerXp(10);
-                showToast("Vocabulary learned! +10 XP awarded.", "✨");
+                showToast("Yeni kelime hafızaya kazındı! +10 TP kazandın.", "✨");
             } else {
-                showToast("Keep practicing! Let's try again.", "📜");
+                showToast("Sorun değil! Tekrar deneyelim.", "📜");
             }
 
-            // Move to next card
             currentFlashcardIdx++;
             if (currentFlashcardIdx >= flashcards.length) {
-                showToast("You conquered the Royal Scrolls stack!", "🏆");
+                showToast("Tüm parşömen kelime kartlarını tamamladın!", "🏆");
                 switchScene('scene-village');
             } else {
                 renderFlashcard();
             }
         }
 
-        // Daily Quest Board mechanics
         function initQuestBoard() {
             sound.playClick();
             const container = document.getElementById('quests-list-container');
@@ -1628,13 +1545,13 @@
                 row.innerHTML = `
                     <div class="flex justify-between items-center border-b border-amber-800/40 pb-1">
                         <span class="pixel-heading text-amber-950 text-xs">${q.title}</span>
-                        <span class="text-[10px] text-green-800 font-bold font-mono">+${q.xpReward} XP / +${q.coinReward} G</span>
+                        <span class="text-[10px] text-green-800 font-bold font-mono">+${q.xpReward} TP / +${q.coinReward} Altın</span>
                     </div>
                     <div class="text-sm font-semibold text-stone-800">${q.text}</div>
                     
                     <div class="flex gap-2 items-center mt-1">
-                        <input type="text" id="input-quest-${q.id}" placeholder="Type English translation..." class="flex-1 bg-[#fbf5eb] border border-amber-800/50 text-xs p-1.5 rounded focus:outline-none focus:border-amber-800 text-stone-900 font-sans">
-                        <button onclick="submitQuestAnswer('${q.id}')" class="pixel-btn-green py-1.5 px-3 text-[10px] whitespace-nowrap shrink-0">Submit Scroll</button>
+                        <input type="text" id="input-quest-${q.id}" placeholder="Türkçe karşılığını küçük harfle yaz..." class="flex-1 bg-[#fbf5eb] border border-amber-800/50 text-xs p-1.5 rounded focus:outline-none focus:border-amber-800 text-stone-900 font-sans">
+                        <button onclick="submitQuestAnswer('${q.id}')" class="pixel-btn-green py-1.5 px-3 text-[10px] whitespace-nowrap shrink-0">Gönder</button>
                     </div>
                 `;
                 container.appendChild(row);
@@ -1649,17 +1566,16 @@
 
             if (!quest) return;
 
-            // Basic clean checker for retro learning
             const targetSol = quest.solution.toLowerCase();
             if (inputVal.includes(targetSol) || targetSol.includes(inputVal) && inputVal.length > 3) {
                 sound.playSuccessSound();
                 rewardPlayerXp(quest.xpReward);
                 rewardPlayerCoins(quest.coinReward);
-                showToast(`Quest Completed! Earned +${quest.xpReward} XP, +${quest.coinReward} Gold`, "🏆");
-                initQuestBoard(); // Reload board with progress
+                showToast(`Görev Başarıyla Tamamlandı! +${quest.xpReward} TP, +${quest.coinReward} Altın`, "🏆");
+                initQuestBoard();
             } else {
                 sound.playHitSound();
-                showToast("Spells order failed. Try matching the translation correctly!", "❌");
+                showToast("Yanlış çeviri! Lütfen tekrar kontrol et.", "❌");
             }
         }
     </script>
@@ -1687,10 +1603,10 @@
                     
                     <div class="shrink-0 text-right">
                         ${isOwned ? `
-                            <span class="text-xs text-green-400 bg-green-950 p-1 px-2.5 rounded font-bold">Equipped</span>
+                            <span class="text-xs text-green-400 bg-green-950 p-1 px-2.5 rounded font-bold">Kuşanıldı</span>
                         ` : `
                             <button onclick="buyShopItem('${item.id}', ${item.cost})" class="pixel-btn-gold text-xs py-1 px-3">
-                                💰 ${item.cost} G
+                                💰 ${item.cost} A
                             </button>
                         `}
                     </div>
@@ -1704,7 +1620,7 @@
         function buyShopItem(itemId, cost) {
             if (state.coins < cost) {
                 sound.playHitSound();
-                showToast("Not enough Gold Coins inside your treasure chest!", "❌");
+                showToast("Cüzdanında yeterli altın bulunmuyor!", "❌");
                 return;
             }
 
@@ -1712,39 +1628,37 @@
             rewardPlayerCoins(-cost);
             state.inventory.push(itemId);
             
-            // Auto equip new category
             const item = shopItems.find(i => i.id === itemId);
             if (item) {
                 state.avatar[item.category] = item.name;
             }
 
-            showToast(`You successfully purchased and equipped the ${item.name}!`, "🎉");
-            initMarketShop(); // re-render layout
+            showToast(`${item.name} başarıyla kuşanıldı!`, "🎉");
+            initMarketShop();
             drawAvatarSvg();
         }
     </script>
 
     <!-- GEMINI API COZY CHAT INTEGRATION AND SIMULATOR -->
     <script>
-        // NPC Persona Configurations
         const npcs = {
             gunter: {
-                name: 'Gunter the Innkeeper',
+                name: 'Hancı Gunter',
                 avatar: '🍺',
-                desc: '"Warm hearth, cold ale, and patient conversational German (Level A1)."',
-                prompt: 'Act as Gunter, a friendly, stout bartender in a cozy fantasy village. You speak in simple German suitable for an absolute beginner (A1 Level). Keep answers under 2 sentences. Include the English translation in parentheses behind any German phrase. Focus on tavern, drinks, bread, and welcoming travelers.'
+                desc: '"Sıcak bir ocak, taze içecekler ve yeni başlayanlar için basit Almanca (A1 Seviyesi)."',
+                prompt: 'Gunter rolünü üstlen. Samimi, neşeli ve Türk maceracılara karşı sabırlı bir hancısın. A1 düzeyinde basit Almanca konuşmalısın. Verdiğin her Almanca cümlenin arkasına parantez içinde Türkçe anlamını ekle. Cevapların en fazla 2 cümle olsun. Konuşmaların han, yemek, içecek ve yolcular üzerine olsun.'
             },
             eldrin: {
-                name: 'Eldrin the Archmage',
+                name: 'Başbüyücü Eldrin',
                 avatar: '🔮',
-                desc: '"Speaking in mysterious riddles and testing ancient wizard vocabulary (Level A2)."',
-                prompt: 'Act as Eldrin, an ancient, cryptic wizard wearing purple robes. Speak to the player in German at an elementary level (A2 Level). Keep answers under 2 sentences. Include English translations in brackets. Quiz the player occasionally about magic or vocabulary words.'
+                desc: '"Gizemli tılsımlar ve kadim kelime haznesi testleri (A2 Seviyesi)."',
+                prompt: 'Kadim başbüyücü Eldrin rolünü üstlen. Almanca dilini A2 düzeyinde konuşacaksın. Her cümlenin arkasına köşeli parantez içinde Türkçe çevirisini ekle. Cevapların en fazla 2 cümle olsun. Oyuncuyu Almanca sihirbazlık terimleri veya kelimeler üzerine ara sıra test et.'
             },
             freya: {
-                name: 'Freya the Merchant',
+                name: 'Tüccar Freya',
                 avatar: '🛒',
-                desc: '"Learn numbers, pricing, and resource trading (Level B1)."',
-                prompt: 'Act as Freya, a sharp, upbeat fantasy market merchant. Speak to the player in German at an intermediate level (B1 Level). Keep answers under 2 sentences. Include English translation hints in brackets behind complex phrases. Discuss coins, trading, pricing, and medieval goods.'
+                desc: '"Sayılar, pazarlık ve ticaret terimleri üzerine pratik yapın (B1 Seviyesi)."',
+                prompt: 'Tüccar Freya rolünü üstlen. B1 düzeyinde orta seviye Almanca konuşacaksın. Karmaşık cümlelerin yanına köşeli parantez içinde Türkçe ipuçları ekle. Cevapların en fazla 2 cümle olsun. Maden, ticaret, fiyatlandırma ve eşyalar üzerine konuş.'
             }
         };
 
@@ -1752,7 +1666,6 @@
             sound.playClick();
             state.currentNpc = npcKey;
             
-            // Visual indicators highlight active tab
             ['gunter', 'eldrin', 'freya'].forEach(key => {
                 const btn = document.getElementById(`btn-npc-${key}`);
                 if (key === npcKey) {
@@ -1762,34 +1675,30 @@
                 }
             });
 
-            // Update badge fields
             const npc = npcs[npcKey];
             document.getElementById('npc-name-box').innerText = npc.name;
             document.getElementById('npc-desc-box').innerText = npc.desc;
             document.getElementById('npc-avatar-box').innerText = npc.avatar;
 
-            // Reset chat history list with starter message
             const scroll = document.getElementById('inn-chat-scroll');
             scroll.innerHTML = `
                 <div class="bg-[#2a170d] border border-amber-950 p-2 text-xs rounded text-amber-200 mb-2">
-                    Introduce yourself to ${npc.name}! Send your message in German or English. Use Gemini API below for custom AI answers!
+                    ${npc.name} ile konuşmaya başla! Türkçe veya Almanca yazabilirsin.
                 </div>
                 <div class="flex flex-col gap-1 items-start max-w-[85%] mb-2">
                     <span class="text-[10px] text-amber-400 font-bold px-1">${npc.name}</span>
                     <div class="parchment-panel p-2 text-xs rounded-lg rounded-tl-none">
-                        Hallo! Ich bin ${npc.name}. (Hello! I am ${npc.name}.) Wie kann ich dir heute helfen?
+                        Hallo! Ich bin ${npc.name}. (Merhaba! Ben ${npc.name}.) Wie geht es dir? (Nasılsın?)
                     </div>
                 </div>
             `;
         }
 
-        // Quick responses helper
         function sendNpcQuickReply(phrase) {
             document.getElementById('inn-chat-input').value = phrase;
             sendInnMessage();
         }
 
-        // Main Send action dispatcher
         async function sendInnMessage() {
             const inputEl = document.getElementById('inn-chat-input');
             const userMsg = inputEl.value.trim();
@@ -1798,11 +1707,10 @@
             sound.playClick();
             inputEl.value = '';
 
-            // 1. Render User Message inside Scroll
             const scroll = document.getElementById('inn-chat-scroll');
             const userHtml = `
                 <div class="flex flex-col gap-1 items-end max-w-[85%] self-end">
-                    <span class="text-[10px] text-emerald-400 font-bold px-1">You</span>
+                    <span class="text-[10px] text-emerald-400 font-bold px-1">Sen</span>
                     <div class="stone-panel text-stone-100 p-2 text-xs rounded-lg rounded-tr-none bg-neutral-800">
                         ${userMsg}
                     </div>
@@ -1811,34 +1719,29 @@
             scroll.insertAdjacentHTML('beforeend', userHtml);
             scroll.scrollTop = scroll.scrollHeight;
 
-            // 2. Render temporary loading status animation
             const loadingId = 'loading-' + Date.now();
             const npc = npcs[state.currentNpc];
             const loadHtml = `
                 <div id="${loadingId}" class="flex flex-col gap-1 items-start max-w-[85%]">
                     <span class="text-[10px] text-amber-400 font-bold px-1">${npc.name}</span>
                     <div class="parchment-panel p-2 text-xs rounded-lg rounded-tl-none italic text-stone-600 animate-pulse">
-                        Chanting spell... (AI thinking...)
+                        Büyülü enerji toplanıyor... (Yapay zeka düşünüyor...)
                     </div>
                 </div>
             `;
             scroll.insertAdjacentHTML('beforeend', loadHtml);
             scroll.scrollTop = scroll.scrollHeight;
 
-            // 3. Request actual Gemini API Response or run Simulator if key is empty
             let npcResponse = '';
             
             if (state.apiKey) {
                 npcResponse = await fetchGeminiNpcResponse(userMsg);
             } else {
-                // Simulated cozy fallback replies in case API key is empty
                 npcResponse = simulateNpcReply(state.currentNpc, userMsg);
             }
 
-            // Remove loading
             document.getElementById(loadingId).remove();
 
-            // Render final Response Bubble
             const npcHtml = `
                 <div class="flex flex-col gap-1 items-start max-w-[85%]">
                     <span class="text-[10px] text-amber-400 font-bold px-1">${npc.name}</span>
@@ -1850,11 +1753,9 @@
             scroll.insertAdjacentHTML('beforeend', npcHtml);
             scroll.scrollTop = scroll.scrollHeight;
 
-            // Give XP on conversation engagement
             rewardPlayerXp(5);
         }
 
-        // Live Gemini API client request (Supports user key or automatic context injection)
         async function fetchGeminiNpcResponse(userMessage) {
             const npc = npcs[state.currentNpc];
             const systemPrompt = npc.prompt;
@@ -1867,7 +1768,6 @@
                 }
             };
 
-            // Implement exponential backoff for network stability
             let delay = 1000;
             for (let attempt = 0; attempt < 3; attempt++) {
                 try {
@@ -1882,49 +1782,45 @@
                         const text = result?.candidates?.[0]?.content?.parts?.[0]?.text;
                         if (text) return text.trim();
                     }
-                } catch (err) {
-                    // Fail silently during retries
-                }
-                // Backoff wait
+                } catch (err) {}
                 await new Promise(res => setTimeout(res, delay));
                 delay *= 2;
             }
 
-            return "Entschuldigung! (Apologies!) The magical network is fading. Please check your API key connection.";
+            return "Entschuldigung! (Afedersin!) Sihirli bağlantı gücünü kaybediyor. Lütfen API anahtarını kontrol et.";
         }
 
-        // Simulates realistic cozy conversations offline/without key
+        // Localized simulative fallback conversation
         function simulateNpcReply(npcKey, msg) {
             const cleaned = msg.toLowerCase();
             
             if (npcKey === 'gunter') {
-                if (cleaned.includes('hallo') || cleaned.includes('hi') || cleaned.includes('hello')) {
-                    return "Hallo Abenteurer! (Hello adventurer!) Wie geht es dir? (How are you?)";
+                if (cleaned.includes('hallo') || cleaned.includes('merhaba') || cleaned.includes('selam')) {
+                    return "Hallo Abenteurer! (Merhaba maceracı!) Wie geht es dir? (Nasılsın?)";
                 }
-                if (cleaned.includes('bier') || cleaned.includes('drink') || cleaned.includes('order')) {
-                    return "Hier ist ein kaltes Bier! (Here is a cold beer!) Das kostet zwei Gold. (That costs two gold.)";
+                if (cleaned.includes('bier') || cleaned.includes('içecek') || cleaned.includes('sipariş')) {
+                    return "Hier ist ein kaltes Bier! (İşte soğuk bir bira!) Das kostet zwei Gold. (Bu iki altın tutuyor.)";
                 }
-                return "Das ist wunderbar! (That is wonderful!) Would you like some warm bread with your ale today?";
+                return "Das ist wunderbar! (Bu harika!) Hanımızda taze sıcak ekmek de bulunur, ister misin?";
             }
 
             if (npcKey === 'eldrin') {
-                if (cleaned.includes('magic') || cleaned.includes('zauber') || cleaned.includes('spell')) {
-                    return "Ja, Magie ist mächtig! (Yes, magic is powerful!) Kannst du das Wort 'Zauberspruch' buchstabieren? (Can you spell the word 'spell'?)";
+                if (cleaned.includes('sihir') || cleaned.includes('büyü') || cleaned.includes('tılsım')) {
+                    return "Ja, Magie ist mächtig! (Evet, büyü çok güçlüdür!) Kannst du das Wort 'Zauberspruch' buchstabieren? (Büyülü söz anlamına gelen 'Zauberspruch' kelimesini heceleyebilir misin?)";
                 }
-                return "Interessant... (Interesting...) Learn your verbs daily, and your mana will double!";
+                return "Sehr gut... (Çok iyi...) Almanca kurallarını her gün çalışırsan mana gücün ikiye katlanacaktır!";
             }
 
             if (npcKey === 'freya') {
-                if (cleaned.includes('buy') || cleaned.includes('gold') || cleaned.includes('sell')) {
-                    return "Ich verkaufe feine Schwerter! (I sell fine swords!) Hast du genug Gold? (Do you have enough gold?)";
+                if (cleaned.includes('satın') || cleaned.includes('altın') || cleaned.includes('sat')) {
+                    return "Ich verkaufe feine Schwerter! (Harika kılıçlar satıyorum!) Hast du genug Gold? (Yeterli altının var mı?)";
                 }
-                return "Handeln ist eine Kunst! (Trading is an art!) Tell me what resource you need next.";
+                return "Handeln ist eine Kunst! (Ticaret bir sanattır!) Sana bir dahaki sefere ne lazım?";
             }
 
-            return "Sehr gut! (Very good!) Keep practicing German with me.";
+            return "Sehr gut! (Çok iyi!) Benimle Almanca konuşmaya her gün devam et.";
         }
 
-        // Key management modal configs
         function toggleGeminiSettings() {
             sound.playClick();
             const modal = document.getElementById('popup-api');
@@ -1942,7 +1838,7 @@
             state.apiKey = key;
             localStorage.setItem('gemini_api_key', key);
             toggleGeminiSettings();
-            showToast("Gemini API key configured successfully!", "🛡️");
+            showToast("Gemini API anahtarı başarıyla kaydedildi!", "🛡️");
         }
     </script>
 
@@ -1969,11 +1865,8 @@
             }
         }
 
-        // Fire once browser loads successfully
         window.onload = function() {
-            // Draw default avatar creator layouts
             drawAvatarSvg();
-            // Start default weather preset
             setWeatherPreset('forest');
         }
     </script>
